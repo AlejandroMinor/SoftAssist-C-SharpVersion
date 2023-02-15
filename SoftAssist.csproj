@@ -9,12 +9,49 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="img\icons8-key-security-24A.png" />
+    <None Remove="img\icons8-key-security-24B.png" />
     <None Remove="img\icons8-monitor-24.png" />
     <None Remove="img\icons8-monitor-24A.png" />
+    <None Remove="img\icons8-monitor-24B.png" />
+    <None Remove="img\icons8-office-365-24A.png" />
+    <None Remove="img\icons8-office-365-24B.png" />
+    <None Remove="img\icons8-tools-24A.png" />
+    <None Remove="img\icons8-tools-24B.png" />
+    <None Remove="img\selected.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="img\icons8-monitor-24A.png" />
+    <EmbeddedResource Include="img\icons8-key-security-24A.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\icons8-key-security-24B.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\icons8-monitor-24A.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="img\icons8-monitor-24B.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\icons8-office-365-24A.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\icons8-office-365-24B.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\icons8-tools-24A.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\icons8-tools-24B.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\selected.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>

@@ -10,18 +10,46 @@ namespace SoftAssist
         {
             InitializeComponent();
 
-            x64button.FlatAppearance.BorderSize= 0;
-            x64button.MouseEnter += (sender, e) => {
-                x64button.ForeColor = Color.FromArgb(78, 70, 133);
-               
+            SelectedItemImage.BackColor= Color.Transparent;
+            SelectedItemImage.Visible= false;
+
+            changeImages(x64button, "monitor", 0);
+            changeImages(x86button, "monitor", 50);
+            changeImages(officeSuiteButton, "office-365", 97);
+            changeImages(keysbutton, "key-security", 144);
+            changeImages(toolsButton, "tools", 191);
 
 
+
+
+        }
+        private void changeImages(Button buttonName, String buttonImgName, int ejeY) {
+            // Obtiene la posición actual del botón
+            Point currentLocation = SelectedItemImage.Location;
+
+
+            buttonName.FlatAppearance.BorderSize = 0;
+            buttonName.MouseEnter += (sender, e) =>
+            {
+                buttonName.ForeColor = Color.FromArgb(78, 70, 133);
+
+                string dir = Path.GetDirectoryName(Application.ExecutablePath);
+                string nombreArchivo = Path.Combine(dir, $@"img\icons8-{buttonImgName}-24B.png");
+                buttonName.Image = Image.FromFile(nombreArchivo);
+                SelectedItemImage.Visible = true;
+                SelectedItemImage.Location = new Point(currentLocation.X, currentLocation.Y + ejeY);
+                //MessageBox.Show(SelectedItemImage.Location.ToString());
             };
 
-            x64button.MouseLeave += (sender, e) => {
-                x64button.ForeColor = Color.FromArgb(146, 146, 174);
-            };
+            buttonName.MouseLeave += (sender, e) =>
+            {
+                buttonName.ForeColor = Color.FromArgb(146, 146, 174);
 
+                string dir = Path.GetDirectoryName(Application.ExecutablePath);
+                string nombreArchivo = Path.Combine(dir, $@"img\icons8-{buttonImgName}-24A.png");
+                buttonName.Image = Image.FromFile(nombreArchivo);
+                SelectedItemImage.Visible = false;
+            };
 
         }
 
@@ -45,6 +73,16 @@ namespace SoftAssist
             x64form.Show();
 
 
+
+        }
+
+        private void officeSuiteButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
 
         }
     }
