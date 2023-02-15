@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.logButton = new System.Windows.Forms.Button();
+            this.systemInfoButton = new System.Windows.Forms.Button();
+            this.backupButton = new System.Windows.Forms.Button();
             this.toolsButton = new System.Windows.Forms.Button();
             this.keysbutton = new System.Windows.Forms.Button();
             this.officeSuiteButton = new System.Windows.Forms.Button();
@@ -44,6 +47,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(251)))));
+            this.panel1.Controls.Add(this.logButton);
+            this.panel1.Controls.Add(this.systemInfoButton);
+            this.panel1.Controls.Add(this.backupButton);
             this.panel1.Controls.Add(this.toolsButton);
             this.panel1.Controls.Add(this.keysbutton);
             this.panel1.Controls.Add(this.officeSuiteButton);
@@ -52,8 +58,60 @@
             this.panel1.Controls.Add(this.SelectedItemImage);
             this.panel1.Location = new System.Drawing.Point(0, -5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(163, 456);
+            this.panel1.Size = new System.Drawing.Size(163, 401);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // logButton
+            // 
+            this.logButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(251)))));
+            this.logButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(251)))));
+            this.logButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.logButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(146)))), ((int)(((byte)(174)))));
+            this.logButton.Image = ((System.Drawing.Image)(resources.GetObject("logButton.Image")));
+            this.logButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.logButton.Location = new System.Drawing.Point(12, 343);
+            this.logButton.Name = "logButton";
+            this.logButton.Size = new System.Drawing.Size(140, 40);
+            this.logButton.TabIndex = 8;
+            this.logButton.Text = "Log";
+            this.logButton.UseVisualStyleBackColor = true;
+            // 
+            // systemInfoButton
+            // 
+            this.systemInfoButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.systemInfoButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(251)))));
+            this.systemInfoButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(251)))));
+            this.systemInfoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.systemInfoButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.systemInfoButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(146)))), ((int)(((byte)(174)))));
+            this.systemInfoButton.Image = ((System.Drawing.Image)(resources.GetObject("systemInfoButton.Image")));
+            this.systemInfoButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.systemInfoButton.Location = new System.Drawing.Point(12, 297);
+            this.systemInfoButton.Name = "systemInfoButton";
+            this.systemInfoButton.Size = new System.Drawing.Size(140, 40);
+            this.systemInfoButton.TabIndex = 7;
+            this.systemInfoButton.Text = "Info";
+            this.systemInfoButton.UseVisualStyleBackColor = true;
+            // 
+            // backupButton
+            // 
+            this.backupButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.backupButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(251)))));
+            this.backupButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(251)))));
+            this.backupButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backupButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.backupButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(146)))), ((int)(((byte)(174)))));
+            this.backupButton.Image = ((System.Drawing.Image)(resources.GetObject("backupButton.Image")));
+            this.backupButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.backupButton.Location = new System.Drawing.Point(12, 251);
+            this.backupButton.Name = "backupButton";
+            this.backupButton.Size = new System.Drawing.Size(140, 40);
+            this.backupButton.TabIndex = 6;
+            this.backupButton.Text = "Backup";
+            this.backupButton.UseVisualStyleBackColor = true;
             // 
             // toolsButton
             // 
@@ -155,9 +213,10 @@
             // 
             // centroMainForm
             // 
-            this.centroMainForm.Location = new System.Drawing.Point(186, 12);
+            this.centroMainForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
+            this.centroMainForm.Location = new System.Drawing.Point(179, 12);
             this.centroMainForm.Name = "centroMainForm";
-            this.centroMainForm.Size = new System.Drawing.Size(602, 380);
+            this.centroMainForm.Size = new System.Drawing.Size(609, 371);
             this.centroMainForm.TabIndex = 1;
             // 
             // main
@@ -165,11 +224,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 395);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.centroMainForm);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "main";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SoftAssist";
             this.panel1.ResumeLayout(false);
@@ -188,5 +249,8 @@
         private Button officeSuiteButton;
         private Button keysbutton;
         private Button toolsButton;
+        private Button backupButton;
+        private Button systemInfoButton;
+        private Button logButton;
     }
 }

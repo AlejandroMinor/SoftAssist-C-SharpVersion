@@ -9,6 +9,8 @@ namespace SoftAssist
         public main()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            
 
             SelectedItemImage.BackColor= Color.Transparent;
             SelectedItemImage.Visible= false;
@@ -18,15 +20,14 @@ namespace SoftAssist
             changeImages(officeSuiteButton, "office-365", 97);
             changeImages(keysbutton, "key-security", 144);
             changeImages(toolsButton, "tools", 191);
-
-
-
+            changeImages(backupButton, "save", 232);
+            changeImages(systemInfoButton, "system-information", 278);
+            changeImages(logButton, "log", 325);
 
         }
         private void changeImages(Button buttonName, String buttonImgName, int ejeY) {
             // Obtiene la posición actual del botón
             Point currentLocation = SelectedItemImage.Location;
-
 
             buttonName.FlatAppearance.BorderSize = 0;
             buttonName.MouseEnter += (sender, e) =>
@@ -38,7 +39,8 @@ namespace SoftAssist
                 buttonName.Image = Image.FromFile(nombreArchivo);
                 SelectedItemImage.Visible = true;
                 SelectedItemImage.Location = new Point(currentLocation.X, currentLocation.Y + ejeY);
-                //MessageBox.Show(SelectedItemImage.Location.ToString());
+                
+
             };
 
             buttonName.MouseLeave += (sender, e) =>
@@ -82,6 +84,11 @@ namespace SoftAssist
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

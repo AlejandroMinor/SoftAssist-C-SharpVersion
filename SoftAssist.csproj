@@ -6,19 +6,30 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>systemsoftwareinstall_104153.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="img\icons8-key-security-24A.png" />
     <None Remove="img\icons8-key-security-24B.png" />
+    <None Remove="img\icons8-log-24A.png" />
+    <None Remove="img\icons8-log-24B.png" />
     <None Remove="img\icons8-monitor-24.png" />
     <None Remove="img\icons8-monitor-24A.png" />
     <None Remove="img\icons8-monitor-24B.png" />
     <None Remove="img\icons8-office-365-24A.png" />
     <None Remove="img\icons8-office-365-24B.png" />
+    <None Remove="img\icons8-save-24A.png" />
+    <None Remove="img\icons8-save-24B.png" />
+    <None Remove="img\icons8-system-information-24A.png" />
+    <None Remove="img\icons8-system-information-24B.png" />
     <None Remove="img\icons8-tools-24A.png" />
     <None Remove="img\icons8-tools-24B.png" />
     <None Remove="img\selected.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="systemsoftwareinstall_104153.ico" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,6 +37,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="img\icons8-key-security-24B.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\icons8-log-24A.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\icons8-log-24B.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="img\icons8-monitor-24A.png">
@@ -41,6 +58,18 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="img\icons8-office-365-24B.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\icons8-save-24A.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\icons8-save-24B.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\icons8-system-information-24A.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\icons8-system-information-24B.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="img\icons8-tools-24A.png">
