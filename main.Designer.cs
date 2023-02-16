@@ -56,7 +56,7 @@
             this.panel1.Controls.Add(this.x86button);
             this.panel1.Controls.Add(this.x64button);
             this.panel1.Controls.Add(this.SelectedItemImage);
-            this.panel1.Location = new System.Drawing.Point(0, -5);
+            this.panel1.Location = new System.Drawing.Point(-1, 5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(163, 401);
             this.panel1.TabIndex = 0;
@@ -213,18 +213,18 @@
             // 
             // centroMainForm
             // 
-            this.centroMainForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
-            this.centroMainForm.Location = new System.Drawing.Point(179, 12);
+            this.centroMainForm.BackColor = System.Drawing.Color.White;
+            this.centroMainForm.Location = new System.Drawing.Point(158, 5);
             this.centroMainForm.Name = "centroMainForm";
-            this.centroMainForm.Size = new System.Drawing.Size(609, 371);
+            this.centroMainForm.Size = new System.Drawing.Size(642, 401);
             this.centroMainForm.TabIndex = 1;
             // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(800, 395);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(146)))), ((int)(((byte)(174)))));
+            this.ClientSize = new System.Drawing.Size(800, 412);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.centroMainForm);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

@@ -24,6 +24,7 @@ namespace SoftAssist
             changeImages(systemInfoButton, "system-information", 278);
             changeImages(logButton, "log", 325);
 
+
         }
         private void changeImages(Button buttonName, String buttonImgName, int ejeY) {
             // Obtiene la posición actual del botón

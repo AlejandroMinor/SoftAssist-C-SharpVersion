@@ -28,18 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(x64Form));
+            this.ChromeCheckBox = new System.Windows.Forms.CheckBox();
+            this.ChromeImg = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.ChromeImg)).BeginInit();
             this.SuspendLayout();
             // 
-            // checkBox1
+            // ChromeCheckBox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(39, 34);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(83, 19);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.ChromeCheckBox.AutoSize = true;
+            this.ChromeCheckBox.Location = new System.Drawing.Point(19, 68);
+            this.ChromeCheckBox.Name = "ChromeCheckBox";
+            this.ChromeCheckBox.Size = new System.Drawing.Size(98, 19);
+            this.ChromeCheckBox.TabIndex = 0;
+            this.ChromeCheckBox.Text = "Chrome (x64)";
+            this.ChromeCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // ChromeImg
+            // 
+            this.ChromeImg.Image = ((System.Drawing.Image)(resources.GetObject("ChromeImg.Image")));
+            this.ChromeImg.Location = new System.Drawing.Point(42, 12);
+            this.ChromeImg.Name = "ChromeImg";
+            this.ChromeImg.Size = new System.Drawing.Size(50, 50);
+            this.ChromeImg.TabIndex = 1;
+            this.ChromeImg.TabStop = false;
             // 
             // x64Form
             // 
@@ -48,11 +60,13 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.ChromeImg);
+            this.Controls.Add(this.ChromeCheckBox);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "x64Form";
             this.Text = "x64";
+            ((System.ComponentModel.ISupportInitialize)(this.ChromeImg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -60,6 +74,7 @@
 
         #endregion
 
-        private CheckBox checkBox1;
+        private CheckBox ChromeCheckBox;
+        private PictureBox ChromeImg;
     }
 }
