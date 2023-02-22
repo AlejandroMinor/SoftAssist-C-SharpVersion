@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.selectedForm = new System.Windows.Forms.PictureBox();
             this.logButton = new System.Windows.Forms.Button();
             this.systemInfoButton = new System.Windows.Forms.Button();
             this.backupButton = new System.Windows.Forms.Button();
@@ -41,12 +42,14 @@
             this.SelectedItemImage = new System.Windows.Forms.PictureBox();
             this.centroMainForm = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.selectedForm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SelectedItemImage)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(251)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(125)))), ((int)(((byte)(189)))));
+            this.panel1.Controls.Add(this.selectedForm);
             this.panel1.Controls.Add(this.logButton);
             this.panel1.Controls.Add(this.systemInfoButton);
             this.panel1.Controls.Add(this.backupButton);
@@ -56,20 +59,29 @@
             this.panel1.Controls.Add(this.x86button);
             this.panel1.Controls.Add(this.x64button);
             this.panel1.Controls.Add(this.SelectedItemImage);
-            this.panel1.Location = new System.Drawing.Point(0, -5);
+            this.panel1.Location = new System.Drawing.Point(13, 6);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(163, 401);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // selectedForm
+            // 
+            this.selectedForm.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("selectedForm.BackgroundImage")));
+            this.selectedForm.Location = new System.Drawing.Point(122, 351);
+            this.selectedForm.Name = "selectedForm";
+            this.selectedForm.Size = new System.Drawing.Size(24, 24);
+            this.selectedForm.TabIndex = 9;
+            this.selectedForm.TabStop = false;
+            // 
             // logButton
             // 
             this.logButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.logButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(251)))));
-            this.logButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(251)))));
+            this.logButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(125)))), ((int)(((byte)(189)))));
+            this.logButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(125)))), ((int)(((byte)(189)))));
             this.logButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.logButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(146)))), ((int)(((byte)(174)))));
+            this.logButton.ForeColor = System.Drawing.Color.White;
             this.logButton.Image = ((System.Drawing.Image)(resources.GetObject("logButton.Image")));
             this.logButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.logButton.Location = new System.Drawing.Point(12, 343);
@@ -78,15 +90,16 @@
             this.logButton.TabIndex = 8;
             this.logButton.Text = "Log";
             this.logButton.UseVisualStyleBackColor = true;
+            this.logButton.Click += new System.EventHandler(this.logButton_Click);
             // 
             // systemInfoButton
             // 
             this.systemInfoButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.systemInfoButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(251)))));
-            this.systemInfoButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(251)))));
+            this.systemInfoButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(125)))), ((int)(((byte)(189)))));
+            this.systemInfoButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(125)))), ((int)(((byte)(189)))));
             this.systemInfoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.systemInfoButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.systemInfoButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(146)))), ((int)(((byte)(174)))));
+            this.systemInfoButton.ForeColor = System.Drawing.Color.White;
             this.systemInfoButton.Image = ((System.Drawing.Image)(resources.GetObject("systemInfoButton.Image")));
             this.systemInfoButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.systemInfoButton.Location = new System.Drawing.Point(12, 297);
@@ -95,15 +108,16 @@
             this.systemInfoButton.TabIndex = 7;
             this.systemInfoButton.Text = "Info";
             this.systemInfoButton.UseVisualStyleBackColor = true;
+            this.systemInfoButton.Click += new System.EventHandler(this.systemInfoButton_Click);
             // 
             // backupButton
             // 
             this.backupButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.backupButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(251)))));
-            this.backupButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(251)))));
+            this.backupButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(125)))), ((int)(((byte)(189)))));
+            this.backupButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(125)))), ((int)(((byte)(189)))));
             this.backupButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backupButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.backupButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(146)))), ((int)(((byte)(174)))));
+            this.backupButton.ForeColor = System.Drawing.Color.White;
             this.backupButton.Image = ((System.Drawing.Image)(resources.GetObject("backupButton.Image")));
             this.backupButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.backupButton.Location = new System.Drawing.Point(12, 251);
@@ -112,15 +126,16 @@
             this.backupButton.TabIndex = 6;
             this.backupButton.Text = "Backup";
             this.backupButton.UseVisualStyleBackColor = true;
+            this.backupButton.Click += new System.EventHandler(this.backupButton_Click);
             // 
             // toolsButton
             // 
             this.toolsButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.toolsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(251)))));
-            this.toolsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(251)))));
+            this.toolsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(125)))), ((int)(((byte)(189)))));
+            this.toolsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(125)))), ((int)(((byte)(189)))));
             this.toolsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.toolsButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.toolsButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(146)))), ((int)(((byte)(174)))));
+            this.toolsButton.ForeColor = System.Drawing.Color.White;
             this.toolsButton.Image = ((System.Drawing.Image)(resources.GetObject("toolsButton.Image")));
             this.toolsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.toolsButton.Location = new System.Drawing.Point(12, 205);
@@ -129,15 +144,16 @@
             this.toolsButton.TabIndex = 5;
             this.toolsButton.Text = "Tools";
             this.toolsButton.UseVisualStyleBackColor = true;
+            this.toolsButton.Click += new System.EventHandler(this.toolsButton_Click);
             // 
             // keysbutton
             // 
             this.keysbutton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.keysbutton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(251)))));
-            this.keysbutton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(251)))));
+            this.keysbutton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(125)))), ((int)(((byte)(189)))));
+            this.keysbutton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(125)))), ((int)(((byte)(189)))));
             this.keysbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.keysbutton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.keysbutton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(146)))), ((int)(((byte)(174)))));
+            this.keysbutton.ForeColor = System.Drawing.Color.White;
             this.keysbutton.Image = ((System.Drawing.Image)(resources.GetObject("keysbutton.Image")));
             this.keysbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.keysbutton.Location = new System.Drawing.Point(12, 159);
@@ -151,11 +167,11 @@
             // officeSuiteButton
             // 
             this.officeSuiteButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.officeSuiteButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(251)))));
-            this.officeSuiteButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(251)))));
+            this.officeSuiteButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(125)))), ((int)(((byte)(189)))));
+            this.officeSuiteButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(125)))), ((int)(((byte)(189)))));
             this.officeSuiteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.officeSuiteButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.officeSuiteButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(146)))), ((int)(((byte)(174)))));
+            this.officeSuiteButton.ForeColor = System.Drawing.Color.White;
             this.officeSuiteButton.Image = ((System.Drawing.Image)(resources.GetObject("officeSuiteButton.Image")));
             this.officeSuiteButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.officeSuiteButton.Location = new System.Drawing.Point(12, 113);
@@ -169,11 +185,11 @@
             // x86button
             // 
             this.x86button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.x86button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(251)))));
-            this.x86button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(251)))));
+            this.x86button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(125)))), ((int)(((byte)(189)))));
+            this.x86button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(125)))), ((int)(((byte)(189)))));
             this.x86button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.x86button.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.x86button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(146)))), ((int)(((byte)(174)))));
+            this.x86button.ForeColor = System.Drawing.Color.White;
             this.x86button.Image = ((System.Drawing.Image)(resources.GetObject("x86button.Image")));
             this.x86button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.x86button.Location = new System.Drawing.Point(12, 67);
@@ -182,15 +198,16 @@
             this.x86button.TabIndex = 2;
             this.x86button.Text = "x86 bits";
             this.x86button.UseVisualStyleBackColor = true;
+            this.x86button.Click += new System.EventHandler(this.x86button_Click);
             // 
             // x64button
             // 
             this.x64button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.x64button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(251)))));
-            this.x64button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(251)))));
+            this.x64button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(125)))), ((int)(((byte)(189)))));
+            this.x64button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(125)))), ((int)(((byte)(189)))));
             this.x64button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.x64button.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.x64button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(146)))), ((int)(((byte)(174)))));
+            this.x64button.ForeColor = System.Drawing.Color.White;
             this.x64button.Image = ((System.Drawing.Image)(resources.GetObject("x64button.Image")));
             this.x64button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.x64button.Location = new System.Drawing.Point(12, 16);
@@ -213,18 +230,20 @@
             // 
             // centroMainForm
             // 
-            this.centroMainForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
-            this.centroMainForm.Location = new System.Drawing.Point(179, 12);
+            this.centroMainForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(125)))), ((int)(((byte)(189)))));
+            this.centroMainForm.BackgroundImage = global::SoftAssist.Properties.Resources.flame_1229;
+            this.centroMainForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.centroMainForm.Location = new System.Drawing.Point(182, 6);
             this.centroMainForm.Name = "centroMainForm";
-            this.centroMainForm.Size = new System.Drawing.Size(609, 371);
+            this.centroMainForm.Size = new System.Drawing.Size(427, 400);
             this.centroMainForm.TabIndex = 1;
             // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(800, 395);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(88)))), ((int)(((byte)(133)))));
+            this.ClientSize = new System.Drawing.Size(625, 412);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.centroMainForm);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -234,6 +253,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SoftAssist";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.selectedForm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SelectedItemImage)).EndInit();
             this.ResumeLayout(false);
 
@@ -252,5 +272,6 @@
         private Button backupButton;
         private Button systemInfoButton;
         private Button logButton;
+        private PictureBox selectedForm;
     }
 }
