@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
-    <ApplicationIcon>systemsoftwareinstall_104153.ico</ApplicationIcon>
+    <ApplicationIcon>icons8-laptop-settings-windows-11-color-310.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -41,7 +41,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="systemsoftwareinstall_104153.ico" />
+    <Content Include="icons8-laptop-settings-windows-11-color-310.ico" />
   </ItemGroup>
 
   <ItemGroup>

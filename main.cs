@@ -19,11 +19,11 @@ namespace SoftAssist
             changeImages(x64button, "monitor", 0);
             changeImages(x86button, "monitor", 50);
             changeImages(officeSuiteButton, "office-365", 97);
-            changeImages(keysbutton, "key-security", 144);
-            changeImages(toolsButton, "tools", 191);
-            changeImages(backupButton, "save", 232);
-            changeImages(systemInfoButton, "system-information", 278);
-            changeImages(logButton, "log", 325);
+            changeImages(keysbutton, "key-security", 143);
+            changeImages(toolsButton, "tools", 189);
+            changeImages(backupButton, "save", 235);
+            changeImages(systemInfoButton, "system-information", 281);
+            changeImages(logButton, "log", 327);
 
 
         }
