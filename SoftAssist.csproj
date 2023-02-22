@@ -6,10 +6,22 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
-    <ApplicationIcon>systemsoftwareinstall_104153.ico</ApplicationIcon>
+    <ApplicationIcon>icons8-laptop-settings-windows-11-color-310.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="img\avast-48.png" />
+    <None Remove="img\avast-48B.png" />
+    <None Remove="img\chrome-48.png" />
+    <None Remove="img\chrome-48B.png" />
+    <None Remove="img\console-48.png" />
+    <None Remove="img\documentary-48.png" />
+    <None Remove="img\documentary-48B.png" />
+    <None Remove="img\firefox-48.png" />
+    <None Remove="img\firefox-48B.png" />
+    <None Remove="img\hdd-48.png" />
+    <None Remove="img\icons8-chevron-left-24.png" />
+    <None Remove="img\icons8-chevron-left-24B.png" />
     <None Remove="img\icons8-key-security-24A.png" />
     <None Remove="img\icons8-key-security-24B.png" />
     <None Remove="img\icons8-log-24A.png" />
@@ -29,10 +41,46 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="systemsoftwareinstall_104153.ico" />
+    <Content Include="icons8-laptop-settings-windows-11-color-310.ico" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="img\avast-48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\avast-48B.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\chrome-48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\chrome-48B.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\console-48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\documentary-48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\documentary-48B.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\firefox-48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\firefox-48B.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\hdd-48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\icons8-chevron-left-24.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\icons8-chevron-left-24B.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="img\icons8-key-security-24A.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
