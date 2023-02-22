@@ -29,6 +29,8 @@ namespace SoftAssist
         }
         private void changeImages(Button buttonName, String buttonImgName, int ejeY) {
 
+            changeSelectecForm(buttonName);
+
             Point currentLocation = SelectedItemImage.Location;
 
             buttonName.FlatAppearance.BorderSize = 0;
@@ -41,7 +43,7 @@ namespace SoftAssist
                 buttonName.Image = Image.FromFile(nombreArchivo);
                 SelectedItemImage.Visible = true;
                 SelectedItemImage.Location = new Point(currentLocation.X, currentLocation.Y + ejeY);
-                
+
 
             };
 
@@ -178,6 +180,24 @@ namespace SoftAssist
                 logButton.FlatAppearance.BorderSize = 0;
             }
 
+
+
+        }
+
+        private void changeSelectecForm(Button buttonID) {
+            buttonID.MouseEnter += (sender, e) =>
+            {
+                string dir = Path.GetDirectoryName(Application.ExecutablePath);
+                string pathselectedForm = Path.Combine(dir, $@"img\icons8-chevron-left-24B.png");
+                selectedForm.Image = Image.FromFile(pathselectedForm);
+            };
+
+            buttonID.MouseLeave += (sender, e) =>
+            {
+                string dir = Path.GetDirectoryName(Application.ExecutablePath);
+                string pathselectedForm = Path.Combine(dir, $@"img\icons8-chevron-left-24.png");
+                selectedForm.Image = Image.FromFile(pathselectedForm);
+            };
 
 
         }

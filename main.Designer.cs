@@ -231,7 +231,7 @@
             // centroMainForm
             // 
             this.centroMainForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(125)))), ((int)(((byte)(189)))));
-            this.centroMainForm.BackgroundImage = global::SoftAssist.Properties.Resources.flame_1229;
+            this.centroMainForm.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("centroMainForm.BackgroundImage")));
             this.centroMainForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.centroMainForm.Location = new System.Drawing.Point(182, 6);
             this.centroMainForm.Name = "centroMainForm";
