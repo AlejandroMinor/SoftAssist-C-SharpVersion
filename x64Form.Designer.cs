@@ -69,12 +69,15 @@
             // 
             this.ChromeCheckBoxx64.AutoSize = true;
             this.ChromeCheckBoxx64.BackColor = System.Drawing.Color.Transparent;
+            this.ChromeCheckBoxx64.Checked = true;
+            this.ChromeCheckBoxx64.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ChromeCheckBoxx64.Location = new System.Drawing.Point(20, 91);
             this.ChromeCheckBoxx64.Name = "ChromeCheckBoxx64";
             this.ChromeCheckBoxx64.Size = new System.Drawing.Size(98, 19);
             this.ChromeCheckBoxx64.TabIndex = 0;
             this.ChromeCheckBoxx64.Text = "Chrome (x64)";
             this.ChromeCheckBoxx64.UseVisualStyleBackColor = false;
+            this.ChromeCheckBoxx64.CheckedChanged += new System.EventHandler(this.ChromeCheckBoxx64_CheckedChanged);
             // 
             // chromeImgx64
             // 
@@ -100,12 +103,15 @@
             // 
             this.vlcCheckBoxx64.AutoSize = true;
             this.vlcCheckBoxx64.BackColor = System.Drawing.Color.Transparent;
+            this.vlcCheckBoxx64.Checked = true;
+            this.vlcCheckBoxx64.CheckState = System.Windows.Forms.CheckState.Checked;
             this.vlcCheckBoxx64.Location = new System.Drawing.Point(20, 172);
             this.vlcCheckBoxx64.Name = "vlcCheckBoxx64";
             this.vlcCheckBoxx64.Size = new System.Drawing.Size(111, 19);
             this.vlcCheckBoxx64.TabIndex = 2;
             this.vlcCheckBoxx64.Text = "VLC Player (x64)";
             this.vlcCheckBoxx64.UseVisualStyleBackColor = false;
+            this.vlcCheckBoxx64.CheckedChanged += new System.EventHandler(this.vlcCheckBoxx64_CheckedChanged);
             // 
             // winrarImgx64
             // 
@@ -121,12 +127,15 @@
             // 
             this.winrarCheckBoxx64.AutoSize = true;
             this.winrarCheckBoxx64.BackColor = System.Drawing.Color.Transparent;
+            this.winrarCheckBoxx64.Checked = true;
+            this.winrarCheckBoxx64.CheckState = System.Windows.Forms.CheckState.Checked;
             this.winrarCheckBoxx64.Location = new System.Drawing.Point(20, 253);
             this.winrarCheckBoxx64.Name = "winrarCheckBoxx64";
             this.winrarCheckBoxx64.Size = new System.Drawing.Size(90, 19);
             this.winrarCheckBoxx64.TabIndex = 4;
             this.winrarCheckBoxx64.Text = "Winrar (x64)";
             this.winrarCheckBoxx64.UseVisualStyleBackColor = false;
+            this.winrarCheckBoxx64.CheckedChanged += new System.EventHandler(this.winrarCheckBoxx64_CheckedChanged);
             // 
             // javaImgx64
             // 
@@ -142,12 +151,15 @@
             // 
             this.javaCheckBoxx64.AutoSize = true;
             this.javaCheckBoxx64.BackColor = System.Drawing.Color.Transparent;
+            this.javaCheckBoxx64.Checked = true;
+            this.javaCheckBoxx64.CheckState = System.Windows.Forms.CheckState.Checked;
             this.javaCheckBoxx64.Location = new System.Drawing.Point(20, 334);
             this.javaCheckBoxx64.Name = "javaCheckBoxx64";
             this.javaCheckBoxx64.Size = new System.Drawing.Size(77, 19);
             this.javaCheckBoxx64.TabIndex = 6;
             this.javaCheckBoxx64.Text = "Java (x64)";
             this.javaCheckBoxx64.UseVisualStyleBackColor = false;
+            this.javaCheckBoxx64.CheckedChanged += new System.EventHandler(this.javaCheckBoxx64_CheckedChanged);
             // 
             // avastImgx64
             // 
@@ -163,12 +175,15 @@
             // 
             this.avastCheckBoxx64.AutoSize = true;
             this.avastCheckBoxx64.BackColor = System.Drawing.Color.Transparent;
+            this.avastCheckBoxx64.Checked = true;
+            this.avastCheckBoxx64.CheckState = System.Windows.Forms.CheckState.Checked;
             this.avastCheckBoxx64.Location = new System.Drawing.Point(155, 334);
             this.avastCheckBoxx64.Name = "avastCheckBoxx64";
             this.avastCheckBoxx64.Size = new System.Drawing.Size(105, 19);
             this.avastCheckBoxx64.TabIndex = 14;
             this.avastCheckBoxx64.Text = "Avast Antivirus";
             this.avastCheckBoxx64.UseVisualStyleBackColor = false;
+            this.avastCheckBoxx64.CheckedChanged += new System.EventHandler(this.avastCheckBoxx64_CheckedChanged);
             // 
             // codepackImgx64
             // 
@@ -191,6 +206,7 @@
             this.codecpackCheckBoxx64.TabIndex = 12;
             this.codecpackCheckBoxx64.Text = "K-Lite Codec Pack";
             this.codecpackCheckBoxx64.UseVisualStyleBackColor = false;
+            this.codecpackCheckBoxx64.CheckedChanged += new System.EventHandler(this.codecpackCheckBoxx64_CheckedChanged);
             // 
             // adobeImgx64
             // 
@@ -206,12 +222,15 @@
             // 
             this.adobeCheckBoxx64.AutoSize = true;
             this.adobeCheckBoxx64.BackColor = System.Drawing.Color.Transparent;
+            this.adobeCheckBoxx64.Checked = true;
+            this.adobeCheckBoxx64.CheckState = System.Windows.Forms.CheckState.Checked;
             this.adobeCheckBoxx64.Location = new System.Drawing.Point(155, 172);
             this.adobeCheckBoxx64.Name = "adobeCheckBoxx64";
             this.adobeCheckBoxx64.Size = new System.Drawing.Size(103, 19);
             this.adobeCheckBoxx64.TabIndex = 10;
             this.adobeCheckBoxx64.Text = "Adobe Reader ";
             this.adobeCheckBoxx64.UseVisualStyleBackColor = false;
+            this.adobeCheckBoxx64.CheckedChanged += new System.EventHandler(this.adobeCheckBoxx64_CheckedChanged);
             // 
             // firefoxImgx64
             // 
@@ -233,6 +252,7 @@
             this.firefoxCheckBoxx64.TabIndex = 8;
             this.firefoxCheckBoxx64.Text = "Firefox (x64)";
             this.firefoxCheckBoxx64.UseVisualStyleBackColor = false;
+            this.firefoxCheckBoxx64.CheckedChanged += new System.EventHandler(this.firefoxCheckBoxx64_CheckedChanged);
             // 
             // selectionimgx64
             // 
@@ -276,6 +296,7 @@
             this.teamviewerCheckBoxx64.TabIndex = 18;
             this.teamviewerCheckBoxx64.Text = "Team Viewer";
             this.teamviewerCheckBoxx64.UseVisualStyleBackColor = false;
+            this.teamviewerCheckBoxx64.CheckedChanged += new System.EventHandler(this.teamviewerCheckBoxx64_CheckedChanged);
             // 
             // nitroImgx64
             // 
@@ -297,6 +318,7 @@
             this.nitroCheckBoxx64.TabIndex = 16;
             this.nitroCheckBoxx64.Text = "Nitro PDF (x64)";
             this.nitroCheckBoxx64.UseVisualStyleBackColor = false;
+            this.nitroCheckBoxx64.CheckedChanged += new System.EventHandler(this.nitroCheckBoxx64_CheckedChanged);
             // 
             // Installbuttonx64
             // 
