@@ -7,6 +7,7 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationIcon>icons8-laptop-settings-windows-11-color-310.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,11 +15,29 @@
     <None Remove="img\avast-48B.png" />
     <None Remove="img\chrome-48.png" />
     <None Remove="img\chrome-48B.png" />
+    <None Remove="img\codec-48.png" />
+    <None Remove="img\codec-48B.png" />
     <None Remove="img\console-48.png" />
     <None Remove="img\documentary-48.png" />
     <None Remove="img\documentary-48B.png" />
     <None Remove="img\firefox-48.png" />
     <None Remove="img\firefox-48B.png" />
+    <None Remove="img\flame-1229.png" />
+    <None Remove="img\flame-1242.png" />
+    <None Remove="img\flame-1263.png" />
+    <None Remove="img\flame-1263B.png" />
+    <None Remove="img\flame-1637.png" />
+    <None Remove="img\flame-794.png" />
+    <None Remove="img\flame-artificial-intelligence.png" />
+    <None Remove="img\flame-blue-laptop.png" />
+    <None Remove="img\flame-data-visualisation.png" />
+    <None Remove="img\flame-equipment-repair-advertisement.png" />
+    <None Remove="img\flame-error-404.png" />
+    <None Remove="img\flame-information-security.png" />
+    <None Remove="img\flame-man-and-woman-work-on-analytics-in-a-team.png" />
+    <None Remove="img\flame-monitor-with-camera.png" />
+    <None Remove="img\flame-office-worker-looking-at-wristwatch-and-waiting-for-the-work-day-to-end.png" />
+    <None Remove="img\flame-sign-up-form.png" />
     <None Remove="img\hdd-48.png" />
     <None Remove="img\icons8-chevron-left-24.png" />
     <None Remove="img\icons8-chevron-left-24B.png" />
@@ -31,13 +50,43 @@
     <None Remove="img\icons8-monitor-24B.png" />
     <None Remove="img\icons8-office-365-24A.png" />
     <None Remove="img\icons8-office-365-24B.png" />
+    <None Remove="img\icons8-ok-48.png" />
     <None Remove="img\icons8-save-24A.png" />
     <None Remove="img\icons8-save-24B.png" />
     <None Remove="img\icons8-system-information-24A.png" />
     <None Remove="img\icons8-system-information-24B.png" />
     <None Remove="img\icons8-tools-24A.png" />
     <None Remove="img\icons8-tools-24B.png" />
+    <None Remove="img\index-48.png" />
+    <None Remove="img\index-48B.png" />
+    <None Remove="img\java-48.png" />
+    <None Remove="img\java-48B.png" />
+    <None Remove="img\microsoft-excel-2019-48.png" />
+    <None Remove="img\microsoft-outlook-2019-48.png" />
+    <None Remove="img\microsoft-powerpoint-2019-48.png" />
+    <None Remove="img\microsoft-word-2019-48.png" />
+    <None Remove="img\net-framework-48.png" />
+    <None Remove="img\nitro-48.png" />
+    <None Remove="img\nitro-48B.png" />
+    <None Remove="img\pdf-48.png" />
+    <None Remove="img\pdf-48B.png" />
+    <None Remove="img\photo-gallery-48.png" />
+    <None Remove="img\photo-gallery-48B.png" />
+    <None Remove="img\programming-48.png" />
+    <None Remove="img\run-command-48.png" />
     <None Remove="img\selected.png" />
+    <None Remove="img\software-installer-48.png" />
+    <None Remove="img\spyware-48.png" />
+    <None Remove="img\spyware-48B.png" />
+    <None Remove="img\teamviewer-48.png" />
+    <None Remove="img\teamviewer-48B.png" />
+    <None Remove="img\virus-48.png" />
+    <None Remove="img\virus-48B.png" />
+    <None Remove="img\vlc-48.png" />
+    <None Remove="img\vlc-48B.png" />
+    <None Remove="img\winrar-48.png" />
+    <None Remove="img\winrar-48B.png" />
+    <None Remove="img\x-ray-48.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -72,6 +121,54 @@
     <EmbeddedResource Include="img\firefox-48B.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="img\flame-1229.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\flame-1242.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\flame-1263.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\flame-1263B.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\flame-1637.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\flame-794.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\flame-artificial-intelligence.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\flame-blue-laptop.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\flame-data-visualisation.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\flame-equipment-repair-advertisement.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\flame-error-404.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\flame-information-security.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\flame-man-and-woman-work-on-analytics-in-a-team.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\flame-monitor-with-camera.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\flame-office-worker-looking-at-wristwatch-and-waiting-for-the-work-day-to-end.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\flame-sign-up-form.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="img\hdd-48.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -79,6 +176,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="img\icons8-chevron-left-24B.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\codec-48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\codec-48B.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="img\icons8-key-security-24A.png">
@@ -108,6 +211,9 @@
     <EmbeddedResource Include="img\icons8-office-365-24B.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="img\icons8-ok-48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="img\icons8-save-24A.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -120,13 +226,103 @@
     <EmbeddedResource Include="img\icons8-system-information-24B.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="img\teamviewer-48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\teamviewer-48B.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="img\icons8-tools-24A.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="img\icons8-tools-24B.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="img\index-48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\index-48B.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\java-48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\java-48B.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\microsoft-excel-2019-48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\microsoft-outlook-2019-48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\microsoft-powerpoint-2019-48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\microsoft-word-2019-48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\net-framework-48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\nitro-48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\nitro-48B.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\pdf-48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\pdf-48B.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\photo-gallery-48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\photo-gallery-48B.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\programming-48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\run-command-48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="img\selected.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\software-installer-48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\spyware-48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\spyware-48B.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\virus-48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\virus-48B.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="img\vlc-48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\vlc-48B.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\winrar-48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\winrar-48B.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\x-ray-48.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
