@@ -32,7 +32,8 @@ namespace SoftAssist
 
         private void Installbuttonx64_Click(object sender, EventArgs e)
         {
-
+            Installer installer = new Installer();
+            installer.InstallProgram("x64\\chromeX64.exe","");
 
         }
 
@@ -174,5 +175,6 @@ namespace SoftAssist
             }
             else changeImages(teamviewerImgx64, "img\\teamviewer-48B.png");
         }
+
     }
 }
