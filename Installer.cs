@@ -22,8 +22,6 @@ namespace SoftAssist
             process.StartInfo.CreateNoWindow = true;
             process.Start();
 
-
-
         }
     }
 }
