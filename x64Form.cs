@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -13,15 +14,19 @@ namespace SoftAssist
 {
     public partial class x64Form : Form
     {
+        private bool stopLoop = false;
+        private Thread thread;
         public x64Form()
         {
             InitializeComponent();
+            Stopbuttonx64.Visible = false;
+
         }
 
         private void changeImages(PictureBox imgName, String imgPath)
         {
 
-                imgName.Image = Image.FromFile(imgPath);
+            imgName.Image = Image.FromFile(imgPath);
 
         }
 
@@ -32,10 +37,50 @@ namespace SoftAssist
 
         private void Installbuttonx64_Click(object sender, EventArgs e)
         {
+            thread = new Thread(new ThreadStart(RunLoop));
+            thread.Start();
+            Installbuttonx64.Visible = false;
+            Stopbuttonx64.Visible = true;
+
+
+        }
+
+        private void RunLoop() {
+
+            stopLoop = false;
+
             Installer installer = new Installer();
-            
-            installer.InstallProgram("x64\\chromeX64.exe","", "chromeX64.exe");
-            installer.InstallProgram("x64\\JavaX64.exe","", "JavaX64.exe");
+
+            // Definir los datos de cada programa en un array de objetos
+            var programas = new[] {
+            new { Checkbox = ChromeCheckBoxx64, Filename = "ChromeX64.exe" , itsSilence = "", arch = "x64"},
+            new { Checkbox = vlcCheckBoxx64, Filename = "Vlc.exe", itsSilence = "/S" , arch = "x32" },
+            new { Checkbox = winrarCheckBoxx64, Filename = "WinrarX64.exe", itsSilence = "/S", arch = "x64" },
+            new { Checkbox = javaCheckBoxx64, Filename = "JavaX64.exe", itsSilence = "", arch = "x64" },
+            new { Checkbox = firefoxCheckBoxx64, Filename = "FirefoxX64.exe", itsSilence = "", arch = "x64" },
+            new { Checkbox = adobeCheckBoxx64, Filename = "Adobe.exe", itsSilence = "", arch = "x32" },
+            new { Checkbox = codecpackCheckBoxx64, Filename = "CodecPack.exe", itsSilence = "", arch = "x32" },
+            new { Checkbox = avastCheckBoxx64, Filename = "Avast.exe", itsSilence = "", arch = "x32" },
+            new { Checkbox = nitroCheckBoxx64, Filename = "NitroX64.exe", itsSilence = "", arch = "x64" },
+            new { Checkbox = teamviewerCheckBoxx64, Filename = "Teamviewer.exe", itsSilence = "", arch = "x32" }
+
+            };
+
+            // Iterar sobre el array y llamar a InstallProgram para cada programa seleccionado
+            foreach (var programa in programas)
+            {
+                if (stopLoop) { break; }
+
+                if (programa.Checkbox.Checked)
+                {
+                    installer.InstallProgram($"{programa.arch}\\{programa.Filename}", programa.itsSilence, programa.Filename);
+                }
+            }
+
+            Installbuttonx64.Visible = true;
+            Stopbuttonx64.Visible = false;
+            MessageBox.Show("Instalacion finalizada");
+
 
         }
 
@@ -43,7 +88,7 @@ namespace SoftAssist
         {
             // Si esta seleccionado el checkbox de seleccionar todo entonces selecciona todos los checkbox de los programas
             if (selectionCheckBoxx64.Checked == true)
-            {   
+            {
                 changeImages(selectionimgx64, "img\\index-48.png");
                 selectionCheckBoxx64.Text = "Deseleccionar todos";
                 // Selecciona todos los checkbox de los programas
@@ -59,7 +104,7 @@ namespace SoftAssist
             else
             {
                 changeImages(selectionimgx64, "img\\index-48B.png");
-                selectionCheckBoxx64.Text= "Seleccionar todos";
+                selectionCheckBoxx64.Text = "Seleccionar todos";
                 // Deselecciona todos los checkbox de los programas
                 foreach (Control c in this.Controls)
                 {
@@ -110,10 +155,10 @@ namespace SoftAssist
             {
 
                 changeImages(javaImgx64, "img\\java-48.png");
-                
+
             }
             else changeImages(javaImgx64, "img\\java-48B.png");
-               
+
         }
 
         private void firefoxCheckBoxx64_CheckedChanged(object sender, EventArgs e)
@@ -178,5 +223,21 @@ namespace SoftAssist
             else changeImages(teamviewerImgx64, "img\\teamviewer-48B.png");
         }
 
+        private void Stopbuttonx64_Click(object sender, EventArgs e)
+        {
+
+            // Preguntar si esta seguro de realizar la accion
+            DialogResult dialogResult = MessageBox.Show("¿Estas seguro de realizar esta acción?", "Confirmación", MessageBoxButtons.YesNo);
+            // Si esta seguro de realizar la accion entonces ejecuta el codigo
+            if (dialogResult == DialogResult.Yes)
+            {
+                stopLoop = true;
+                MessageBox.Show("La instalación se detuvo");
+                Stopbuttonx64.Visible= false;
+                Installbuttonx64.Visible= true;
+
+            }
+            
+        }
     }
 }

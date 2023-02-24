@@ -32,10 +32,6 @@ namespace SoftAssist
                 }
             }
 
-            MessageBox.Show("Process terminado");
-
-
-
         }
 
 
