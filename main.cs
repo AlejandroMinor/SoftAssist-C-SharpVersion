@@ -7,10 +7,11 @@ namespace SoftAssist
     public partial class main : Form
     {
 
-        // Crear una instancia del formulario a mostrar
+        // Crear una instancia de los formularios a mostrar
         x64Form x64form = new x64Form();
-        // Crear una instancia del formulario a mostrar
         x32Form x32form = new x32Form();
+        keysForm keysform = new keysForm();
+
         public main()
         {
             InitializeComponent();
@@ -86,6 +87,7 @@ namespace SoftAssist
 
             focusButton(x64button);
             x32form.Hide();
+            keysform.Hide();
 
         }
 
@@ -215,9 +217,27 @@ namespace SoftAssist
             focusButton(officeSuiteButton);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void keysbutton_Click(object sender, EventArgs e)
         {
             focusButton(keysbutton);
+            // Establecer el tamaño y la posición del formulario
+            keysform.TopLevel = false;
+            keysform.Size = centroMainForm.Size;
+            keysform.Location = new Point(0,0);
+
+            // Agregar el formulario como un control secundario del panel
+            centroMainForm.Controls.Add(keysform);
+
+            // Quitar marco al formulario
+            keysform.FormBorderStyle = FormBorderStyle.None;
+
+            // Mostrar el formulario
+            keysform.Show();
+
+            focusButton(keysbutton);
+
+            x64form.Hide();
+            x32form.Hide();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -246,6 +266,7 @@ namespace SoftAssist
 
             focusButton(x86button);
             x64form.Hide();
+            keysform.Hide();
         }
 
         private void toolsButton_Click(object sender, EventArgs e)
@@ -266,6 +287,11 @@ namespace SoftAssist
         private void logButton_Click(object sender, EventArgs e)
         {
             focusButton(logButton);
+        }
+
+        private void centroMainForm_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

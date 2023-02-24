@@ -162,7 +162,7 @@
             this.keysbutton.TabIndex = 4;
             this.keysbutton.Text = "Keys";
             this.keysbutton.UseVisualStyleBackColor = true;
-            this.keysbutton.Click += new System.EventHandler(this.button1_Click);
+            this.keysbutton.Click += new System.EventHandler(this.keysbutton_Click);
             // 
             // officeSuiteButton
             // 
@@ -237,6 +237,7 @@
             this.centroMainForm.Name = "centroMainForm";
             this.centroMainForm.Size = new System.Drawing.Size(427, 400);
             this.centroMainForm.TabIndex = 1;
+            this.centroMainForm.Paint += new System.Windows.Forms.PaintEventHandler(this.centroMainForm_Paint);
             // 
             // main
             // 

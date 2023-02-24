@@ -381,6 +381,7 @@
             this.Controls.Add(this.Stopbuttonx32);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.SystemColors.Window;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(450, 400);
             this.MinimizeBox = false;
