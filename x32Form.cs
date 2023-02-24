@@ -53,15 +53,15 @@ namespace SoftAssist
 
             // Definir los datos de cada programa en un array de objetos
             var programas = new[] {
-            new { Checkbox = ChromeCheckBoxx32, Filename = "Chromex32.exe" , itsSilence = "", arch = "x32"},
+            new { Checkbox = ChromeCheckBoxx32, Filename = "ChromeX32.exe" , itsSilence = "", arch = "x32"},
             new { Checkbox = vlcCheckBoxx32, Filename = "Vlc.exe", itsSilence = "/S" , arch = "x32" },
-            new { Checkbox = winrarCheckBoxx32, Filename = "Winrarx32.exe", itsSilence = "/S", arch = "x32" },
-            new { Checkbox = javaCheckBoxx32, Filename = "Javax32.exe", itsSilence = "", arch = "x32" },
-            new { Checkbox = firefoxCheckBoxx32, Filename = "Firefoxx32.exe", itsSilence = "", arch = "x32" },
+            new { Checkbox = winrarCheckBoxx32, Filename = "WinrarX32.exe", itsSilence = "/S", arch = "x32" },
+            new { Checkbox = javaCheckBoxx32, Filename = "JavaX32.exe", itsSilence = "", arch = "x32" },
+            new { Checkbox = firefoxCheckBoxx32, Filename = "FirefoxX32.exe", itsSilence = "", arch = "x32" },
             new { Checkbox = adobeCheckBoxx32, Filename = "Adobe.exe", itsSilence = "", arch = "x32" },
             new { Checkbox = codecpackCheckBoxx32, Filename = "CodecPack.exe", itsSilence = "", arch = "x32" },
             new { Checkbox = avastCheckBoxx32, Filename = "Avast.exe", itsSilence = "", arch = "x32" },
-            new { Checkbox = nitroCheckBoxx32, Filename = "Nitrox32.exe", itsSilence = "", arch = "x32" },
+            new { Checkbox = nitroCheckBoxx32, Filename = "NitroX32.exe", itsSilence = "", arch = "x32" },
             new { Checkbox = teamviewerCheckBoxx32, Filename = "Teamviewer.exe", itsSilence = "", arch = "x32" }
 
             };
