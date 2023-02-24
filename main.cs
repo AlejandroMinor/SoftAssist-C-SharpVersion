@@ -6,11 +6,18 @@ namespace SoftAssist
 {
     public partial class main : Form
     {
+
+        // Crear una instancia del formulario a mostrar
+        x64Form x64form = new x64Form();
+        // Crear una instancia del formulario a mostrar
+        x32Form x32form = new x32Form();
         public main()
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
-            
+
+
+
 
             SelectedItemImage.BackColor= Color.Transparent;
             SelectedItemImage.Visible= false;
@@ -61,8 +68,7 @@ namespace SoftAssist
 
         private void x64button_Click_1(object sender, EventArgs e)
         {
-            // Crear una instancia del formulario a mostrar
-            x64Form x64form = new x64Form();
+
 
             // Establecer el tamaño y la posición del formulario
             x64form.TopLevel = false;
@@ -79,6 +85,7 @@ namespace SoftAssist
             x64form.Show();
 
             focusButton(x64button);
+            x32form.Hide();
 
         }
 
@@ -220,7 +227,25 @@ namespace SoftAssist
 
         private void x86button_Click(object sender, EventArgs e)
         {
+
+
+
+            // Establecer el tamaño y la posición del formulario
+            x32form.TopLevel = false;
+            x32form.Size = centroMainForm.Size;
+            x32form.Location = new Point(0, 0);
+
+            // Agregar el formulario como un control secundario del panel
+            centroMainForm.Controls.Add(x32form);
+
+            // Quitar marco al formulario
+            x32form.FormBorderStyle = FormBorderStyle.None;
+
+            // Mostrar el formulario
+            x32form.Show();
+
             focusButton(x86button);
+            x64form.Hide();
         }
 
         private void toolsButton_Click(object sender, EventArgs e)

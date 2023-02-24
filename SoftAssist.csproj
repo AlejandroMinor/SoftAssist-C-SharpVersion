@@ -22,22 +22,7 @@
     <None Remove="img\documentary-48B.png" />
     <None Remove="img\firefox-48.png" />
     <None Remove="img\firefox-48B.png" />
-    <None Remove="img\flame-1229.png" />
-    <None Remove="img\flame-1242.png" />
-    <None Remove="img\flame-1263.png" />
-    <None Remove="img\flame-1263B.png" />
-    <None Remove="img\flame-1637.png" />
-    <None Remove="img\flame-794.png" />
-    <None Remove="img\flame-artificial-intelligence.png" />
-    <None Remove="img\flame-blue-laptop.png" />
-    <None Remove="img\flame-data-visualisation.png" />
-    <None Remove="img\flame-equipment-repair-advertisement.png" />
-    <None Remove="img\flame-error-404.png" />
-    <None Remove="img\flame-information-security.png" />
-    <None Remove="img\flame-man-and-woman-work-on-analytics-in-a-team.png" />
-    <None Remove="img\flame-monitor-with-camera.png" />
-    <None Remove="img\flame-office-worker-looking-at-wristwatch-and-waiting-for-the-work-day-to-end.png" />
-    <None Remove="img\flame-sign-up-form.png" />
+    <None Remove="img\flame-e-books.png" />
     <None Remove="img\hdd-48.png" />
     <None Remove="img\icons8-chevron-left-24.png" />
     <None Remove="img\icons8-chevron-left-24B.png" />
@@ -121,52 +106,7 @@
     <EmbeddedResource Include="img\firefox-48B.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="img\flame-1229.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="img\flame-1242.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="img\flame-1263.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="img\flame-1263B.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="img\flame-1637.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="img\flame-794.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="img\flame-artificial-intelligence.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="img\flame-blue-laptop.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="img\flame-data-visualisation.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="img\flame-equipment-repair-advertisement.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="img\flame-error-404.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="img\flame-information-security.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="img\flame-man-and-woman-work-on-analytics-in-a-team.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="img\flame-monitor-with-camera.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="img\flame-office-worker-looking-at-wristwatch-and-waiting-for-the-work-day-to-end.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="img\flame-sign-up-form.png">
+    <EmbeddedResource Include="img\flame-e-books.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="img\hdd-48.png">
@@ -333,6 +273,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Update="x32Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -340,6 +283,24 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="img\flame-1229.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="img\flame-1242.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="img\flame-1637.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="img\flame-794.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="img\flame-artificial-intelligence.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
