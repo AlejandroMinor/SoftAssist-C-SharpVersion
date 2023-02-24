@@ -52,6 +52,7 @@
             this.nitroImgx64 = new System.Windows.Forms.PictureBox();
             this.nitroCheckBoxx64 = new System.Windows.Forms.CheckBox();
             this.Installbuttonx64 = new System.Windows.Forms.Button();
+            this.Stopbuttonx64 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chromeImgx64)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vlcImgx64)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.winrarImgx64)).BeginInit();
@@ -332,6 +333,19 @@
             this.Installbuttonx64.UseVisualStyleBackColor = true;
             this.Installbuttonx64.Click += new System.EventHandler(this.Installbuttonx64_Click);
             // 
+            // Stopbuttonx64
+            // 
+            this.Stopbuttonx64.BackColor = System.Drawing.Color.Red;
+            this.Stopbuttonx64.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Stopbuttonx64.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Stopbuttonx64.Location = new System.Drawing.Point(292, 308);
+            this.Stopbuttonx64.Name = "Stopbuttonx64";
+            this.Stopbuttonx64.Size = new System.Drawing.Size(92, 29);
+            this.Stopbuttonx64.TabIndex = 26;
+            this.Stopbuttonx64.Text = "Detener";
+            this.Stopbuttonx64.UseVisualStyleBackColor = false;
+            this.Stopbuttonx64.Click += new System.EventHandler(this.Stopbuttonx64_Click);
+            // 
             // x64Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -341,7 +355,6 @@
             this.ClientSize = new System.Drawing.Size(434, 361);
             this.ControlBox = false;
             this.Controls.Add(this.selectionCheckBoxx64);
-            this.Controls.Add(this.Installbuttonx64);
             this.Controls.Add(this.selectionimgx64);
             this.Controls.Add(this.teamviewerImgx64);
             this.Controls.Add(this.teamviewerCheckBoxx64);
@@ -363,6 +376,8 @@
             this.Controls.Add(this.vlcCheckBoxx64);
             this.Controls.Add(this.chromeImgx64);
             this.Controls.Add(this.ChromeCheckBoxx64);
+            this.Controls.Add(this.Installbuttonx64);
+            this.Controls.Add(this.Stopbuttonx64);
             this.ForeColor = System.Drawing.SystemColors.Window;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(450, 400);
@@ -412,5 +427,6 @@
         private PictureBox nitroImgx64;
         private CheckBox nitroCheckBoxx64;
         private Button Installbuttonx64;
+        private Button Stopbuttonx64;
     }
 }
