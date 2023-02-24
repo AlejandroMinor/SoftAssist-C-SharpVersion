@@ -33,7 +33,9 @@ namespace SoftAssist
         private void Installbuttonx64_Click(object sender, EventArgs e)
         {
             Installer installer = new Installer();
-            installer.InstallProgram("x64\\chromeX64.exe","");
+            
+            installer.InstallProgram("x64\\chromeX64.exe","", "chromeX64.exe");
+            installer.InstallProgram("x64\\JavaX64.exe","", "JavaX64.exe");
 
         }
 
