@@ -52,11 +52,36 @@ namespace SoftAssist
         }
 
 
-        
 
-        public void DescomprimirArchivoZip(string rutaArchivoZip)
+
+        public void DescomprimirArchivoZip(string rutaArchivoZip, string rutaDestino, IProgress<int> progress = null)
         {
-        ZipFile.ExtractToDirectory(rutaArchivoZip, "Activadores");
+            using (ZipArchive archivoZip = ZipFile.OpenRead(rutaArchivoZip))
+            {
+                int totalEntradas = archivoZip.Entries.Count;
+                int entradasDescomprimidas = 0;
+
+                foreach (ZipArchiveEntry entrada in archivoZip.Entries)
+                {
+                    string rutaCompleta = Path.Combine(rutaDestino, entrada.FullName);
+                    string nombreDirectorio = Path.GetDirectoryName(rutaCompleta);
+
+                    if (!string.IsNullOrEmpty(nombreDirectorio))
+                    {
+                        Directory.CreateDirectory(nombreDirectorio);
+                    }
+
+                    entrada.ExtractToFile(rutaCompleta, true);
+
+                    entradasDescomprimidas++;
+
+                    if (progress != null)
+                    {
+                        int porcentajeCompletado = (int)((double)entradasDescomprimidas / totalEntradas * 100);
+                        progress.Report(porcentajeCompletado);
+                    }
+                }
+            }
         }
 
 }
