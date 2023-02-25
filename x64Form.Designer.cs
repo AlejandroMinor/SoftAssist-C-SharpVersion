@@ -352,6 +352,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(125)))), ((int)(((byte)(189)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(434, 361);
             this.ControlBox = false;
             this.Controls.Add(this.selectionCheckBoxx64);
@@ -378,7 +379,9 @@
             this.Controls.Add(this.ChromeCheckBoxx64);
             this.Controls.Add(this.Installbuttonx64);
             this.Controls.Add(this.Stopbuttonx64);
+            this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.SystemColors.Window;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(450, 400);
             this.MinimizeBox = false;
