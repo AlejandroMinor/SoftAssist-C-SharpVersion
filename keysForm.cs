@@ -37,5 +37,11 @@ namespace SoftAssist
         {
 
         }
+
+        private void Installbuttonx64_Click(object sender, EventArgs e)
+        {
+             Installer installer = new Installer();
+            installer.DescomprimirArchivoZip("Activadores\\KMSpico.zip");
+        }
     }
 }

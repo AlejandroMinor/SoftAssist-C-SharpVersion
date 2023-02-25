@@ -242,6 +242,7 @@
             this.Installbuttonx64.TabIndex = 26;
             this.Installbuttonx64.Text = "Abrir ubicación ";
             this.Installbuttonx64.UseVisualStyleBackColor = true;
+            this.Installbuttonx64.Click += new System.EventHandler(this.Installbuttonx64_Click);
             // 
             // pictureBox2
             // 

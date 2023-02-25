@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO.Compression;
 using System.Linq;
 using System.Security.Principal;
 using System.Text;
@@ -49,5 +50,14 @@ namespace SoftAssist
 
             return output.Contains(serviceName);
         }
-    }
+
+
+        
+
+        public void DescomprimirArchivoZip(string rutaArchivoZip)
+        {
+        ZipFile.ExtractToDirectory(rutaArchivoZip, "Activadores");
+        }
+
+}
 }
