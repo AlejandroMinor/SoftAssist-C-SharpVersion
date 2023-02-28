@@ -66,6 +66,8 @@ namespace SoftAssist
 
             };
 
+            installer.writeLog("➡ INSTALACIÓN X32....................🔄");
+
             // Iterar sobre el array y llamar a InstallProgram para cada programa seleccionado
             foreach (var programa in programas)
             {

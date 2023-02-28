@@ -33,10 +33,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.win10radioButton = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.barraProgreso = new System.Windows.Forms.ProgressBar();
+            this.windowsProgressBar = new System.Windows.Forms.ProgressBar();
             this.windows7bradioButton = new System.Windows.Forms.RadioButton();
             this.win7radioButton = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.officeProgressBar = new System.Windows.Forms.ProgressBar();
             this.office2010radioButton = new System.Windows.Forms.RadioButton();
             this.office360radioButton = new System.Windows.Forms.RadioButton();
             this.office1316radioButton = new System.Windows.Forms.RadioButton();
@@ -88,7 +89,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.barraProgreso);
+            this.groupBox1.Controls.Add(this.windowsProgressBar);
             this.groupBox1.Controls.Add(this.windows7bradioButton);
             this.groupBox1.Controls.Add(this.win7radioButton);
             this.groupBox1.Controls.Add(this.win10radioButton);
@@ -100,12 +101,12 @@
             this.groupBox1.Text = "Activadores Windows";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // barraProgreso
+            // windowsProgressBar
             // 
-            this.barraProgreso.Location = new System.Drawing.Point(133, -1);
-            this.barraProgreso.Name = "barraProgreso";
-            this.barraProgreso.Size = new System.Drawing.Size(181, 17);
-            this.barraProgreso.TabIndex = 28;
+            this.windowsProgressBar.Location = new System.Drawing.Point(133, -1);
+            this.windowsProgressBar.Name = "windowsProgressBar";
+            this.windowsProgressBar.Size = new System.Drawing.Size(181, 17);
+            this.windowsProgressBar.TabIndex = 28;
             // 
             // windows7bradioButton
             // 
@@ -133,6 +134,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.officeProgressBar);
             this.groupBox2.Controls.Add(this.office2010radioButton);
             this.groupBox2.Controls.Add(this.office360radioButton);
             this.groupBox2.Controls.Add(this.office1316radioButton);
@@ -142,6 +144,13 @@
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Activadores Office";
+            // 
+            // officeProgressBar
+            // 
+            this.officeProgressBar.Location = new System.Drawing.Point(133, -1);
+            this.officeProgressBar.Name = "officeProgressBar";
+            this.officeProgressBar.Size = new System.Drawing.Size(181, 17);
+            this.officeProgressBar.TabIndex = 29;
             // 
             // office2010radioButton
             // 
@@ -326,6 +335,7 @@
         private Button button1;
         private Button openPathbutton;
         private PictureBox pictureBox2;
-        private ProgressBar barraProgreso;
+        private ProgressBar windowsProgressBar;
+        private ProgressBar officeProgressBar;
     }
 }
