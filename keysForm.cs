@@ -19,7 +19,8 @@ namespace SoftAssist
         {
             InitializeComponent();
             vScrollBar1.Visible = false;
-            barraProgreso.Visible = false;
+            windowsProgressBar.Visible = false;
+            officeProgressBar.Visible = false;
         }
 
         private void keysForm_Load(object sender, EventArgs e)
@@ -37,11 +38,11 @@ namespace SoftAssist
 
         }
 
-        private void unzipAndInstall(System.Windows.Forms.RadioButton radioButton, String programName) {
+        private void unzipAndInstall(System.Windows.Forms.RadioButton radioButton, String programName, ProgressBar barraProgreso) {
 
             if (radioButton.Checked)
             {
-
+                barraProgreso.Value = 0;
                 // Preguntar si esta seguro de realizar la accion
                 DialogResult dialogResult = MessageBox.Show($"¿Estas seguro de ejecutar {programName}?", "Confirmación", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
@@ -73,19 +74,19 @@ namespace SoftAssist
 
         private void win10radioButton_CheckedChanged(object sender, EventArgs e)
         {
-            unzipAndInstall(win10radioButton, "KMSpico");
+            unzipAndInstall(win10radioButton, "KMSpico",windowsProgressBar);
 
         }
 
         private void win7radioButton_CheckedChanged(object sender, EventArgs e)
         {
-            unzipAndInstall(win7radioButton, "RemoveWAT");
+            unzipAndInstall(win7radioButton, "RemoveWAT",windowsProgressBar);
         }
 
 
         private void windows7bradioButton_CheckedChanged(object sender, EventArgs e)
         {
-            unzipAndInstall(windows7bradioButton, "windows7loader");
+            unzipAndInstall(windows7bradioButton, "windows7loader", windowsProgressBar);
             Installer installer = new Installer();
             Thread.Sleep(3000);
 
@@ -94,12 +95,12 @@ namespace SoftAssist
 
         private void office1316radioButton_CheckedChanged(object sender, EventArgs e)
         {
-            unzipAndInstall(office1316radioButton, "KMSpico");
+            unzipAndInstall(office1316radioButton, "KMSpico", officeProgressBar);
         }
 
         private void office360radioButton_CheckedChanged(object sender, EventArgs e)
         {
-            unzipAndInstall(office360radioButton, "OInstall");
+            unzipAndInstall(office360radioButton, "OInstall", officeProgressBar);
             Installer installer = new Installer();
             Thread.Sleep(3000);
 
@@ -108,7 +109,7 @@ namespace SoftAssist
 
         private void office2010radioButton_CheckedChanged(object sender, EventArgs e)
         {
-            unzipAndInstall(office2010radioButton, "Office10");
+            unzipAndInstall(office2010radioButton, "Office10", officeProgressBar);
         }
 
         private void winrarX64radioButton_CheckedChanged(object sender, EventArgs e)
@@ -121,11 +122,11 @@ namespace SoftAssist
                 if (dialogResult == DialogResult.Yes)
                 {
                     Thread thread;
-                    barraProgreso.Visible = true;
+                    windowsProgressBar.Visible = true;
                     Installer installer = new Installer();
                     IProgress<int> progreso = new Progress<int>(valor =>
                     {
-                        barraProgreso.Value = valor;
+                        windowsProgressBar.Value = valor;
                     });
 
                     installer.InstallProgram("Activadores\\WinrarCrackX64.exe", "", "WinrarCrackX64.exe");
@@ -151,11 +152,11 @@ namespace SoftAssist
                 if (dialogResult == DialogResult.Yes)
                 {
                     Thread thread;
-                    barraProgreso.Visible = true;
+                    windowsProgressBar.Visible = true;
                     Installer installer = new Installer();
                     IProgress<int> progreso = new Progress<int>(valor =>
                     {
-                        barraProgreso.Value = valor;
+                        windowsProgressBar.Value = valor;
                     });
 
                     installer.InstallProgram("Activadores\\WinrarCrackX32.exe", "", "WinrarCrackX32.exe");
@@ -178,11 +179,11 @@ namespace SoftAssist
                 if (dialogResult == DialogResult.Yes)
                 {
                     Thread thread;
-                    barraProgreso.Visible = true;
+                    windowsProgressBar.Visible = true;
                     Installer installer = new Installer();
                     IProgress<int> progreso = new Progress<int>(valor =>
                     {
-                        barraProgreso.Value = valor;
+                        windowsProgressBar.Value = valor;
                     });
 
                     installer.InstallProgram("Activadores\\Nitro.txt", "", "Nitro.txt");
@@ -205,11 +206,11 @@ namespace SoftAssist
                 if (dialogResult == DialogResult.Yes)
                 {
                     Thread thread;
-                    barraProgreso.Visible = true;
+                    windowsProgressBar.Visible = true;
                     Installer installer = new Installer();
                     IProgress<int> progreso = new Progress<int>(valor =>
                     {
-                        barraProgreso.Value = valor;
+                        windowsProgressBar.Value = valor;
                     });
                     string rutaCarpeta = @"C:\Windows\System32\drivers\etc";
                     Process.Start("explorer.exe", rutaCarpeta);
