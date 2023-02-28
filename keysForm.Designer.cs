@@ -37,6 +37,7 @@
             this.windows7bradioButton = new System.Windows.Forms.RadioButton();
             this.win7radioButton = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.officeProgressBar = new System.Windows.Forms.ProgressBar();
             this.office2010radioButton = new System.Windows.Forms.RadioButton();
             this.office360radioButton = new System.Windows.Forms.RadioButton();
             this.office1316radioButton = new System.Windows.Forms.RadioButton();
@@ -48,7 +49,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.openPathbutton = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.officeProgressBar = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -144,6 +144,13 @@
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Activadores Office";
+            // 
+            // officeProgressBar
+            // 
+            this.officeProgressBar.Location = new System.Drawing.Point(133, -1);
+            this.officeProgressBar.Name = "officeProgressBar";
+            this.officeProgressBar.Size = new System.Drawing.Size(181, 17);
+            this.officeProgressBar.TabIndex = 29;
             // 
             // office2010radioButton
             // 
@@ -271,13 +278,6 @@
             this.pictureBox2.Size = new System.Drawing.Size(100, 19);
             this.pictureBox2.TabIndex = 27;
             this.pictureBox2.TabStop = false;
-            // 
-            // officeProgressBar
-            // 
-            this.officeProgressBar.Location = new System.Drawing.Point(133, -1);
-            this.officeProgressBar.Name = "officeProgressBar";
-            this.officeProgressBar.Size = new System.Drawing.Size(181, 17);
-            this.officeProgressBar.TabIndex = 29;
             // 
             // keysForm
             // 

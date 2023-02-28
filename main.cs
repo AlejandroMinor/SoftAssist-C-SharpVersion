@@ -11,6 +11,7 @@ namespace SoftAssist
         x64Form x64form = new x64Form();
         x32Form x32form = new x32Form();
         keysForm keysform = new keysForm();
+        LogForm logform = new LogForm();
 
         public main()
         {
@@ -88,6 +89,7 @@ namespace SoftAssist
             focusButton(x64button);
             x32form.Hide();
             keysform.Hide();
+            logform.Hide();
 
         }
 
@@ -238,6 +240,7 @@ namespace SoftAssist
 
             x64form.Hide();
             x32form.Hide();
+            logform.Hide();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -267,6 +270,7 @@ namespace SoftAssist
             focusButton(x86button);
             x64form.Hide();
             keysform.Hide();
+            logform.Hide();
         }
 
         private void toolsButton_Click(object sender, EventArgs e)
@@ -286,7 +290,27 @@ namespace SoftAssist
 
         private void logButton_Click(object sender, EventArgs e)
         {
+            // Establecer el tamaño y la posición del formulario
+            logform.TopLevel = false;
+            logform.Size = centroMainForm.Size;
+            logform.Location = new Point(0, 0);
+            
+
+            // Agregar el formulario como un control secundario del panel
+            centroMainForm.Controls.Add(logform);
+
+            // Quitar marco al formulario
+            logform.FormBorderStyle = FormBorderStyle.None;
+
+            // Mostrar el formulario
+            logform.Show();
+
+
             focusButton(logButton);
+            
+            x64form.Hide();
+            x32form.Hide();
+            keysform.Hide();
         }
 
         private void centroMainForm_Paint(object sender, PaintEventArgs e)

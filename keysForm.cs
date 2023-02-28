@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.DataFormats;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace SoftAssist
@@ -216,7 +217,6 @@ namespace SoftAssist
                     Process.Start("explorer.exe", rutaCarpeta);
 
                     installer.InstallProgram("Activadores\\corel_hosts.txt", "", "corel_hosts.txt");
-
 
                 }
                 else

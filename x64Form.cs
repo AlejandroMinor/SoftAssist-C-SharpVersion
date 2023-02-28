@@ -66,14 +66,16 @@ namespace SoftAssist
 
             };
 
-            // Iterar sobre el array y llamar a InstallProgram para cada programa seleccionado
+            installer.writeLog("➡ INSTALACIÓN X64....................🔄");
+
+            // Iterar sobre el array y llamar a InstallProgram para cada programa seleccionado 
             foreach (var programa in programas)
             {
                 if (stopLoop) { break; }
 
                 if (programa.Checkbox.Checked)
                 {
-                    installer.InstallProgram($"{programa.arch}\\{programa.Filename}", programa.itsSilence, programa.Filename);
+                        installer.InstallProgram($"{programa.arch}\\{programa.Filename}", programa.itsSilence, programa.Filename);
                 }
             }
 

@@ -33,6 +33,18 @@ namespace SoftAssist
                 }
             }
 
+            string[] partes = processName.Split('.');
+            string resultado = partes[0];
+
+            if (process.ExitCode == 0)
+            {
+                writeLog($"{resultado}....................✅");
+            }
+            else
+            {
+                writeLog($"{resultado}....................❌");
+            }
+
         }
 
 
@@ -49,6 +61,20 @@ namespace SoftAssist
             string output = process.StandardOutput.ReadToEnd();
 
             return output.Contains(serviceName);
+        }
+
+        public void writeLog(String texto)
+        {
+
+            // Acceder al formulario que contiene el RichTextBox
+            LogForm logform = Application.OpenForms.OfType<LogForm>().FirstOrDefault();
+
+            if (logform != null)
+            {
+                // Escribir en el RichTextBox
+                logform.RichTextBoxControl.AppendText($"{texto} \n");
+            }
+
         }
 
 
