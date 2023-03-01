@@ -12,6 +12,7 @@ namespace SoftAssist
         x32Form x32form = new x32Form();
         keysForm keysform = new keysForm();
         LogForm logform = new LogForm();
+        OfficeForm officeform = new OfficeForm();
 
         public main()
         {
@@ -87,6 +88,7 @@ namespace SoftAssist
             x32form.Hide();
             keysform.Hide();
             logform.Hide();
+            officeform.Hide();
 
         }
 
@@ -213,7 +215,29 @@ namespace SoftAssist
 
         private void officeSuiteButton_Click(object sender, EventArgs e)
         {
+
+            
+            // Establecer el tamaño y la posición del formulario
+            officeform.TopLevel = false;
+            officeform.Size = centroMainForm.Size;
+            officeform.Location = new Point(0, 0);
+
+            // Agregar el formulario como un control secundario del panel
+            centroMainForm.Controls.Add(officeform);
+
+            // Quitar marco al formulario
+            officeform.FormBorderStyle = FormBorderStyle.None;
+
+            // Mostrar el formulario
+            officeform.Show();
+
             focusButton(officeSuiteButton);
+
+            x64form.Hide();
+            x32form.Hide();
+            keysform.Hide();
+            logform.Hide();
+
         }
 
         private void keysbutton_Click(object sender, EventArgs e)
@@ -237,6 +261,7 @@ namespace SoftAssist
 
             x64form.Hide();
             x32form.Hide();
+            officeform.Hide();
             logform.Hide();
         }
 
@@ -268,6 +293,7 @@ namespace SoftAssist
             x64form.Hide();
             keysform.Hide();
             logform.Hide();
+            officeform.Hide();
         }
 
         private void toolsButton_Click(object sender, EventArgs e)
