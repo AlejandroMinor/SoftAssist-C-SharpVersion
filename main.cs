@@ -18,9 +18,6 @@ namespace SoftAssist
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
 
-
-
-
             SelectedItemImage.BackColor= Color.Transparent;
             SelectedItemImage.Visible= false;
             selectedForm.Visible = false;
@@ -290,21 +287,8 @@ namespace SoftAssist
 
         private void logButton_Click(object sender, EventArgs e)
         {
-            // Establecer el tamaño y la posición del formulario
-            logform.TopLevel = false;
-            logform.Size = centroMainForm.Size;
-            logform.Location = new Point(0, 0);
-            
-
-            // Agregar el formulario como un control secundario del panel
-            centroMainForm.Controls.Add(logform);
-
-            // Quitar marco al formulario
-            logform.FormBorderStyle = FormBorderStyle.None;
-
             // Mostrar el formulario
             logform.Show();
-
 
             focusButton(logButton);
             
@@ -313,9 +297,36 @@ namespace SoftAssist
             keysform.Hide();
         }
 
+        private void showLog() {
+
+            
+            // Establecer el tamaño y la posición del formulario
+            logform.TopLevel = false;
+            logform.Size = centroMainForm.Size;
+            logform.Location = new Point(0, 0);
+
+
+            // Agregar el formulario como un control secundario del panel
+            centroMainForm.Controls.Add(logform);
+
+            // Quitar marco al formulario
+            logform.FormBorderStyle = FormBorderStyle.None;
+
+            logform.Show();
+            Thread.Sleep(1000);
+            logform.Hide();
+
+        }
+
         private void centroMainForm_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void main_Load(object sender, EventArgs e)
+        {
+            // Se crea una instancia del formulario para que este pueda mostrar el log desde el principio de la ejecución
+            showLog();
         }
     }
 }
