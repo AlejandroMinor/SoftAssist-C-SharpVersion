@@ -16,12 +16,16 @@ namespace SoftAssist
 {
     public partial class keysForm : Form
     {
+        // Creacion de objeto para ejecutar metodos de la clase Installer
+        Installer installer = new Installer();
         public keysForm()
         {
             InitializeComponent();
             vScrollBar1.Visible = false;
             windowsProgressBar.Visible = false;
             officeProgressBar.Visible = false;
+           
+
         }
 
         private void keysForm_Load(object sender, EventArgs e)
@@ -39,56 +43,26 @@ namespace SoftAssist
 
         }
 
-        private void unzipAndInstall(System.Windows.Forms.RadioButton radioButton, String programName, ProgressBar barraProgreso) {
 
-            if (radioButton.Checked)
-            {
-                barraProgreso.Value = 0;
-                // Preguntar si esta seguro de realizar la accion
-                DialogResult dialogResult = MessageBox.Show($"¿Estas seguro de ejecutar {programName}?", "Confirmación", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes)
-                {   
-                    Thread thread;
-                    barraProgreso.Visible = true;
-                    Installer installer = new Installer();
-                    IProgress<int> progreso = new Progress<int>(valor =>
-                    {
-                        barraProgreso.Value = valor;
-                    });
-
-                    thread = new Thread(() =>
-                    {
-                        installer.DescomprimirArchivoZip($"Activadores\\{programName}.zip", "Activadores", progreso);
-                    });
-                    thread.Start();
-
-                    installer.InstallProgram($"Activadores\\{programName}.exe", "", $"{programName}.exe");
-                }
-                else
-                {
-                    radioButton.Checked = false;
-
-                }
-            }
-
-        }
 
         private void win10radioButton_CheckedChanged(object sender, EventArgs e)
         {
-            unzipAndInstall(win10radioButton, "KMSpico",windowsProgressBar);
+            
+            installer.unzipAndInstall(win10radioButton, "KMSpico",windowsProgressBar);
 
         }
 
         private void win7radioButton_CheckedChanged(object sender, EventArgs e)
         {
-            unzipAndInstall(win7radioButton, "RemoveWAT",windowsProgressBar);
+            installer.unzipAndInstall(win7radioButton, "RemoveWAT",windowsProgressBar);
         }
 
 
         private void windows7bradioButton_CheckedChanged(object sender, EventArgs e)
         {
-            unzipAndInstall(windows7bradioButton, "windows7loader", windowsProgressBar);
-            Installer installer = new Installer();
+            
+            installer.unzipAndInstall(windows7bradioButton, "windows7loader", windowsProgressBar);
+            
             Thread.Sleep(3000);
 
             installer.InstallProgram("Activadores\\windows7loader.exe", "", "windows7loader.exe");
@@ -96,13 +70,12 @@ namespace SoftAssist
 
         private void office1316radioButton_CheckedChanged(object sender, EventArgs e)
         {
-            unzipAndInstall(office1316radioButton, "KMSpico", officeProgressBar);
+            installer.unzipAndInstall(office1316radioButton, "KMSpico", officeProgressBar);
         }
 
         private void office360radioButton_CheckedChanged(object sender, EventArgs e)
         {
-            unzipAndInstall(office360radioButton, "OInstall", officeProgressBar);
-            Installer installer = new Installer();
+            installer.unzipAndInstall(office360radioButton, "OInstall", officeProgressBar);
             Thread.Sleep(3000);
 
             installer.InstallProgram("Activadores\\OInstall.exe", "", "OInstall.exe");
@@ -110,7 +83,7 @@ namespace SoftAssist
 
         private void office2010radioButton_CheckedChanged(object sender, EventArgs e)
         {
-            unzipAndInstall(office2010radioButton, "Office10", officeProgressBar);
+            installer.unzipAndInstall(office2010radioButton, "Office10", officeProgressBar);
         }
 
         private void winrarX64radioButton_CheckedChanged(object sender, EventArgs e)

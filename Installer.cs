@@ -110,5 +110,41 @@ namespace SoftAssist
             }
         }
 
-}
+        public void unzipAndInstall(System.Windows.Forms.RadioButton radioButton, String programName, ProgressBar barraProgreso)
+        {
+
+            if (radioButton.Checked)
+            {
+                barraProgreso.Value = 0;
+                // Preguntar si esta seguro de realizar la accion
+                DialogResult dialogResult = MessageBox.Show($"¿Estas seguro de ejecutar {programName}?", "Confirmación", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    Thread thread;
+                    barraProgreso.Visible = true;
+                    Installer installer = new Installer();
+                    IProgress<int> progreso = new Progress<int>(valor =>
+                    {
+                        barraProgreso.Value = valor;
+                    });
+
+                    thread = new Thread(() =>
+                    {
+                        installer.DescomprimirArchivoZip($"Activadores\\{programName}.zip", "Activadores", progreso);
+                    });
+                    thread.Start();
+
+                    installer.InstallProgram($"Activadores\\{programName}.exe", "", $"{programName}.exe");
+                }
+                else
+                {
+                    radioButton.Checked = false;
+
+                }
+            }
+
+        }
+
+
+    }
 }
