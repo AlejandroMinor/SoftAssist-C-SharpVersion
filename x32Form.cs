@@ -41,8 +41,37 @@ namespace SoftAssist
             thread.Start();
             Installbuttonx32.Visible = false;
             Stopbuttonx32.Visible = true;
+            disableAllCheckBox();
+        }
 
+        //Funcion para descativar todos los checkbox
+        private void disableAllCheckBox()
+        {
+            this.ChromeCheckBoxx32.Enabled = false;
+            this.vlcCheckBoxx32.Enabled = false;
+            this.winrarCheckBoxx32.Enabled = false;
+            this.javaCheckBoxx32.Enabled = false;
+            this.firefoxCheckBoxx32.Enabled = false;
+            this.adobeCheckBoxx32.Enabled = false;
+            this.codecpackCheckBoxx32.Enabled = false;
+            this.avastCheckBoxx32.Enabled = false;
+            this.nitroCheckBoxx32.Enabled = false;
+            this.teamviewerCheckBoxx32.Enabled = false;
+        }
 
+        //Funcion para activar todos los checkbox
+        private void enableAllCheckBox()
+        {
+            this.ChromeCheckBoxx32.Enabled = true;
+            this.vlcCheckBoxx32.Enabled = true;
+            this.winrarCheckBoxx32.Enabled = true;
+            this.javaCheckBoxx32.Enabled = true;
+            this.firefoxCheckBoxx32.Enabled = true;
+            this.adobeCheckBoxx32.Enabled = true;
+            this.codecpackCheckBoxx32.Enabled = true;
+            this.avastCheckBoxx32.Enabled = true;
+            this.nitroCheckBoxx32.Enabled = true;
+            this.teamviewerCheckBoxx32.Enabled = true;
         }
 
         private void RunLoop() {
@@ -81,7 +110,8 @@ namespace SoftAssist
 
             Installbuttonx32.Visible = true;
             Stopbuttonx32.Visible = false;
-            MessageBox.Show("Instalacion finalizada");
+            MessageBox.Show("Instalacion Finalizada");
+            enableAllCheckBox();
 
 
         }
@@ -237,6 +267,7 @@ namespace SoftAssist
                 MessageBox.Show("La instalación se detuvo");
                 Stopbuttonx32.Visible= false;
                 Installbuttonx32.Visible= true;
+                enableAllCheckBox();
 
             }
             

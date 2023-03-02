@@ -49,6 +49,7 @@
             this.groupBox1.Controls.Add(this.office2013radioButton);
             this.groupBox1.Controls.Add(this.office2016radioButton);
             this.groupBox1.Controls.Add(this.office2019radioButton);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox1.Location = new System.Drawing.Point(30, 157);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(358, 188);
@@ -66,6 +67,7 @@
             this.office2007radioButton.TabStop = true;
             this.office2007radioButton.Text = "Office 2007 x32";
             this.office2007radioButton.UseVisualStyleBackColor = true;
+            this.office2007radioButton.CheckedChanged += new System.EventHandler(this.office2007radioButton_CheckedChanged);
             // 
             // office2010x32radioButton
             // 
@@ -77,6 +79,7 @@
             this.office2010x32radioButton.TabStop = true;
             this.office2010x32radioButton.Text = "Office 2010 x32";
             this.office2010x32radioButton.UseVisualStyleBackColor = true;
+            this.office2010x32radioButton.CheckedChanged += new System.EventHandler(this.office2010x32radioButton_CheckedChanged);
             // 
             // office2010x64radioButton
             // 
@@ -88,6 +91,7 @@
             this.office2010x64radioButton.TabStop = true;
             this.office2010x64radioButton.Text = "Office 2010 x64";
             this.office2010x64radioButton.UseVisualStyleBackColor = true;
+            this.office2010x64radioButton.CheckedChanged += new System.EventHandler(this.office2010x64radioButton_CheckedChanged);
             // 
             // office2013radioButton
             // 
@@ -99,6 +103,7 @@
             this.office2013radioButton.TabStop = true;
             this.office2013radioButton.Text = "Office 2013 x64";
             this.office2013radioButton.UseVisualStyleBackColor = true;
+            this.office2013radioButton.CheckedChanged += new System.EventHandler(this.office2013radioButton_CheckedChanged);
             // 
             // office2016radioButton
             // 
@@ -110,6 +115,7 @@
             this.office2016radioButton.TabStop = true;
             this.office2016radioButton.Text = "Office 2016 x64";
             this.office2016radioButton.UseVisualStyleBackColor = true;
+            this.office2016radioButton.CheckedChanged += new System.EventHandler(this.office2016radioButton_CheckedChanged);
             // 
             // office2019radioButton
             // 
@@ -121,6 +127,7 @@
             this.office2019radioButton.TabStop = true;
             this.office2019radioButton.Text = "Office 2019 x64";
             this.office2019radioButton.UseVisualStyleBackColor = true;
+            this.office2019radioButton.CheckedChanged += new System.EventHandler(this.office2019radioButton_CheckedChanged);
             // 
             // pictureBox1
             // 
