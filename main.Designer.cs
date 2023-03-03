@@ -252,6 +252,7 @@
             this.Name = "main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SoftAssist";
+            this.Load += new System.EventHandler(this.main_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.selectedForm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SelectedItemImage)).EndInit();

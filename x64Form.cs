@@ -41,8 +41,39 @@ namespace SoftAssist
             thread.Start();
             Installbuttonx64.Visible = false;
             Stopbuttonx64.Visible = true;
+            disableAllCheckBox();
 
 
+        }
+
+        // Funcion para desactivar todos los checkbox  
+        private void disableAllCheckBox()
+        {
+            this.ChromeCheckBoxx64.Enabled = false;
+            this.vlcCheckBoxx64.Enabled = false;
+            this.winrarCheckBoxx64.Enabled = false;
+            this.javaCheckBoxx64.Enabled = false;
+            this.firefoxCheckBoxx64.Enabled = false;
+            this.adobeCheckBoxx64.Enabled = false;
+            this.codecpackCheckBoxx64.Enabled = false;
+            this.avastCheckBoxx64.Enabled = false;
+            this.nitroCheckBoxx64.Enabled = false;
+            this.teamviewerCheckBoxx64.Enabled = false;
+        }
+
+        // Funcion para activar todos los checkbox
+        private void enableAllCheckBox()
+        {
+            this.ChromeCheckBoxx64.Enabled = true;
+            this.vlcCheckBoxx64.Enabled = true;
+            this.winrarCheckBoxx64.Enabled = true;
+            this.javaCheckBoxx64.Enabled = true;
+            this.firefoxCheckBoxx64.Enabled = true;
+            this.adobeCheckBoxx64.Enabled = true;
+            this.codecpackCheckBoxx64.Enabled = true;
+            this.avastCheckBoxx64.Enabled = true;
+            this.nitroCheckBoxx64.Enabled = true;
+            this.teamviewerCheckBoxx64.Enabled = true;
         }
 
         private void RunLoop() {
@@ -81,7 +112,8 @@ namespace SoftAssist
 
             Installbuttonx64.Visible = true;
             Stopbuttonx64.Visible = false;
-            MessageBox.Show("Instalacion finalizada");
+            MessageBox.Show("Instalacion Finalizada");
+            enableAllCheckBox();
 
 
         }
@@ -237,6 +269,7 @@ namespace SoftAssist
                 MessageBox.Show("La instalación se detuvo");
                 Stopbuttonx64.Visible= false;
                 Installbuttonx64.Visible= true;
+                enableAllCheckBox();
 
             }
             
