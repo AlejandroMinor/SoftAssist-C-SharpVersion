@@ -13,6 +13,7 @@ namespace SoftAssist
         keysForm keysform = new keysForm();
         LogForm logform = new LogForm();
         OfficeForm officeform = new OfficeForm();
+        ToolsForm toolsform = new ToolsForm();
 
         public main()
         {
@@ -32,7 +33,6 @@ namespace SoftAssist
             changeImages(systemInfoButton, "system-information", 281);
             changeImages(logButton, "log", 327);
 
-
         }
         private void changeImages(Button buttonName, String buttonImgName, int ejeY) {
 
@@ -50,8 +50,6 @@ namespace SoftAssist
                 buttonName.Image = Image.FromFile(nombreArchivo);
                 SelectedItemImage.Visible = true;
                 SelectedItemImage.Location = new Point(currentLocation.X, currentLocation.Y + ejeY);
-
-
             };
 
             buttonName.MouseLeave += (sender, e) =>
@@ -68,7 +66,6 @@ namespace SoftAssist
 
         private void x64button_Click_1(object sender, EventArgs e)
         {
-
 
             // Establecer el tamaño y la posición del formulario
             x64form.TopLevel = false;
@@ -190,8 +187,6 @@ namespace SoftAssist
                 logButton.FlatAppearance.BorderSize = 0;
             }
 
-
-
         }
 
         private void changeSelectecForm(Button buttonID) {
@@ -209,14 +204,11 @@ namespace SoftAssist
                 selectedForm.Image = Image.FromFile(pathselectedForm);
             };
 
-
         }
 
 
         private void officeSuiteButton_Click(object sender, EventArgs e)
-        {
-
-            
+        {    
             // Establecer el tamaño y la posición del formulario
             officeform.TopLevel = false;
             officeform.Size = centroMainForm.Size;
@@ -237,6 +229,7 @@ namespace SoftAssist
             x32form.Hide();
             keysform.Hide();
             logform.Hide();
+            toolsform.Hide();
 
         }
 
@@ -263,6 +256,7 @@ namespace SoftAssist
             x32form.Hide();
             officeform.Hide();
             logform.Hide();
+            toolsform.Hide();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -294,11 +288,32 @@ namespace SoftAssist
             keysform.Hide();
             logform.Hide();
             officeform.Hide();
+            toolsform.Hide();
         }
 
         private void toolsButton_Click(object sender, EventArgs e)
         {
+
+            // Establecer el tamaño y la posición del formulario
+           toolsform.TopLevel = false;
+            toolsform.Size = centroMainForm.Size;
+            toolsform.Location = new Point(0, 0);
+
+            // Agregar el formulario como un control secundario del panel
+            centroMainForm.Controls.Add(toolsform);
+
+            // Quitar marco al formulario
+            toolsform.FormBorderStyle = FormBorderStyle.None;
+
+            // Mostrar el formulario
+            toolsform.Show();
             focusButton(toolsButton);
+
+            x32form.Hide();
+            x64form.Hide();
+            keysform.Hide();
+            logform.Hide();
+            officeform.Hide();
         }
 
         private void backupButton_Click(object sender, EventArgs e)
@@ -321,6 +336,8 @@ namespace SoftAssist
             x64form.Hide();
             x32form.Hide();
             keysform.Hide();
+            toolsform.Hide();
+            officeform.Hide();
         }
 
         private void showLog() {
