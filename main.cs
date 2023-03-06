@@ -33,7 +33,6 @@ namespace SoftAssist
             changeImages(systemInfoButton, "system-information", 281);
             changeImages(logButton, "log", 327);
 
-
         }
         private void changeImages(Button buttonName, String buttonImgName, int ejeY) {
 
@@ -51,8 +50,6 @@ namespace SoftAssist
                 buttonName.Image = Image.FromFile(nombreArchivo);
                 SelectedItemImage.Visible = true;
                 SelectedItemImage.Location = new Point(currentLocation.X, currentLocation.Y + ejeY);
-
-
             };
 
             buttonName.MouseLeave += (sender, e) =>
@@ -69,7 +66,6 @@ namespace SoftAssist
 
         private void x64button_Click_1(object sender, EventArgs e)
         {
-
 
             // Establecer el tamaño y la posición del formulario
             x64form.TopLevel = false;
@@ -191,8 +187,6 @@ namespace SoftAssist
                 logButton.FlatAppearance.BorderSize = 0;
             }
 
-
-
         }
 
         private void changeSelectecForm(Button buttonID) {
@@ -210,14 +204,11 @@ namespace SoftAssist
                 selectedForm.Image = Image.FromFile(pathselectedForm);
             };
 
-
         }
 
 
         private void officeSuiteButton_Click(object sender, EventArgs e)
-        {
-
-            
+        {    
             // Establecer el tamaño y la posición del formulario
             officeform.TopLevel = false;
             officeform.Size = centroMainForm.Size;
