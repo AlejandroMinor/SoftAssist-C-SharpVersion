@@ -86,6 +86,7 @@ namespace SoftAssist
             keysform.Hide();
             logform.Hide();
             officeform.Hide();
+            toolsform.Hide();
 
         }
 
