@@ -36,10 +36,10 @@
             this.crystalDiskradioButton.AutoSize = true;
             this.crystalDiskradioButton.Location = new System.Drawing.Point(21, 22);
             this.crystalDiskradioButton.Name = "crystalDiskradioButton";
-            this.crystalDiskradioButton.Size = new System.Drawing.Size(181, 19);
+            this.crystalDiskradioButton.Size = new System.Drawing.Size(82, 19);
             this.crystalDiskradioButton.TabIndex = 0;
             this.crystalDiskradioButton.TabStop = true;
-            this.crystalDiskradioButton.Text = "Salud HDD (Crystal Diskradio)";
+            this.crystalDiskradioButton.Text = "Salud HDD";
             this.crystalDiskradioButton.UseVisualStyleBackColor = true;
             this.crystalDiskradioButton.CheckedChanged += new System.EventHandler(this.crystalDiskradioButton_CheckedChanged);
             // 
@@ -50,6 +50,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(125)))), ((int)(((byte)(189)))));
             this.ClientSize = new System.Drawing.Size(397, 281);
             this.Controls.Add(this.crystalDiskradioButton);
+            this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Name = "ToolsForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "Form1";
