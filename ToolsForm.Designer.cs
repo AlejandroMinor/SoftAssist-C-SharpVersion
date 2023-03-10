@@ -35,21 +35,21 @@
             this.saludBateriaradioButton = new System.Windows.Forms.RadioButton();
             this.saludhddradioButton = new System.Windows.Forms.RadioButton();
             this.ConfiguracionesgroupBox = new System.Windows.Forms.GroupBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.AdminDiscosradioButton = new System.Windows.Forms.RadioButton();
             this.ControlPermisosradioButton = new System.Windows.Forms.RadioButton();
             this.AdminDispositivosradioButton = new System.Windows.Forms.RadioButton();
             this.NetFrameworkgroupBox = new System.Windows.Forms.GroupBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.NetTresCincoradioButton = new System.Windows.Forms.RadioButton();
             this.NetCuatroradioButton = new System.Windows.Forms.RadioButton();
             this.NetCuatroCincoradioButton = new System.Windows.Forms.RadioButton();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.diagnosticogroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.ConfiguracionesgroupBox.SuspendLayout();
-            this.NetFrameworkgroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.NetFrameworkgroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -123,6 +123,15 @@
             this.ConfiguracionesgroupBox.TabStop = false;
             this.ConfiguracionesgroupBox.Text = "Diagnóstico del Equipo";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(6, 34);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(51, 57);
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            // 
             // AdminDiscosradioButton
             // 
             this.AdminDiscosradioButton.AutoSize = true;
@@ -169,6 +178,15 @@
             this.NetFrameworkgroupBox.TabStop = false;
             this.NetFrameworkgroupBox.Text = "NetFramework";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(6, 34);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(51, 57);
+            this.pictureBox3.TabIndex = 5;
+            this.pictureBox3.TabStop = false;
+            // 
             // NetTresCincoradioButton
             // 
             this.NetTresCincoradioButton.AutoSize = true;
@@ -209,24 +227,6 @@
             this.vScrollBar1.Size = new System.Drawing.Size(26, 561);
             this.vScrollBar1.TabIndex = 5;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(6, 34);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(51, 57);
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(6, 22);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(51, 57);
-            this.pictureBox3.TabIndex = 5;
-            this.pictureBox3.TabStop = false;
-            // 
             // ToolsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -248,9 +248,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ConfiguracionesgroupBox.ResumeLayout(false);
             this.ConfiguracionesgroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.NetFrameworkgroupBox.ResumeLayout(false);
             this.NetFrameworkgroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
