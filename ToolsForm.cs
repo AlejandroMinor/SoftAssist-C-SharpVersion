@@ -16,12 +16,20 @@ namespace SoftAssist
         public ToolsForm()
         {
             InitializeComponent();
+            vScrollBar1.Hide();
         }
 
         private void crystalDiskradioButton_CheckedChanged(object sender, EventArgs e)
         {
 
-            if (crystalDiskradioButton.Checked)
+
+
+        }
+
+        private void saludhddradioButton_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (saludhddradioButton.Checked)
             {
                 // Preguntar si esta seguro de realizar la accion
                 DialogResult dialogResult = MessageBox.Show($"¿Estas seguro de ejecutar esta acción?", "Confirmación", MessageBoxButtons.YesNo);
@@ -62,15 +70,10 @@ namespace SoftAssist
 
                 else
                 {
-                    crystalDiskradioButton.Checked = false;
+                    saludhddradioButton.Checked = false;
                 }
 
             }
-
-
-
-
-
 
         }
     }
