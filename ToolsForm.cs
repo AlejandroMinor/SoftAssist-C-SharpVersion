@@ -76,5 +76,20 @@ namespace SoftAssist
             }
 
         }
+
+        private void diagnosticogroupBox_Enter(object sender, EventArgs e)
+        {
+
+    
+            
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            // Todos los radiobuttons de la seccion se quitan de seleccion
+            crystalDiskradioButton.Checked = false;
+            saludhddradioButton.Checked = false;
+            saludBateriaradioButton.Checked = false;
+        }
     }
 }
