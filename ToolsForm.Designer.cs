@@ -77,6 +77,7 @@
             this.diagnosticogroupBox.TabIndex = 1;
             this.diagnosticogroupBox.TabStop = false;
             this.diagnosticogroupBox.Text = "Diagnóstico del Equipo";
+            this.diagnosticogroupBox.Enter += new System.EventHandler(this.diagnosticogroupBox_Enter);
             // 
             // pictureBox1
             // 
@@ -86,6 +87,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(51, 57);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // saludBateriaradioButton
             // 
