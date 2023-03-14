@@ -1,7 +1,3 @@
-using SoftAssist.Properties;
-using System.Windows.Forms;
-using static System.Windows.Forms.DataFormats;
-
 namespace SoftAssist
 {
     public partial class main : Form
@@ -20,8 +16,8 @@ namespace SoftAssist
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
 
-            SelectedItemImage.BackColor= Color.Transparent;
-            SelectedItemImage.Visible= false;
+            SelectedItemImage.BackColor = Color.Transparent;
+            SelectedItemImage.Visible = false;
             selectedForm.Visible = false;
 
             changeImages(x64button, "monitor", 0);
@@ -34,7 +30,8 @@ namespace SoftAssist
             changeImages(logButton, "log", 327);
 
         }
-        private void changeImages(Button buttonName, String buttonImgName, int ejeY) {
+        private void changeImages(Button buttonName, String buttonImgName, int ejeY)
+        {
 
             changeSelectecForm(buttonName);
 
@@ -90,7 +87,8 @@ namespace SoftAssist
 
         }
 
-        private void focusButton(Button buttonID) {
+        private void focusButton(Button buttonID)
+        {
 
             if (buttonID == x64button)
             {
@@ -100,7 +98,8 @@ namespace SoftAssist
                 selectedForm.Visible = true;
                 selectedForm.Location = new Point(122, 24);
             }
-            else {
+            else
+            {
                 x64button.FlatAppearance.BorderSize = 0;
             }
             if (buttonID == x86button)
@@ -112,7 +111,8 @@ namespace SoftAssist
                 selectedForm.Location = new Point(122, 76);
 
             }
-            else { 
+            else
+            {
                 x86button.FlatAppearance.BorderSize = 0;
             }
             if (buttonID == officeSuiteButton)
@@ -135,8 +135,8 @@ namespace SoftAssist
                 selectedForm.Visible = true;
                 selectedForm.Location = new Point(122, 167);
             }
-            else 
-            { 
+            else
+            {
                 keysbutton.FlatAppearance.BorderSize = 0;
             }
             if (buttonID == toolsButton)
@@ -147,8 +147,8 @@ namespace SoftAssist
                 selectedForm.Visible = true;
                 selectedForm.Location = new Point(122, 213);
             }
-            else 
-            { 
+            else
+            {
                 toolsButton.FlatAppearance.BorderSize = 0;
             }
             if (buttonID == backupButton)
@@ -190,7 +190,8 @@ namespace SoftAssist
 
         }
 
-        private void changeSelectecForm(Button buttonID) {
+        private void changeSelectecForm(Button buttonID)
+        {
             buttonID.MouseEnter += (sender, e) =>
             {
                 string dir = Path.GetDirectoryName(Application.ExecutablePath);
@@ -209,7 +210,7 @@ namespace SoftAssist
 
 
         private void officeSuiteButton_Click(object sender, EventArgs e)
-        {    
+        {
             // Establecer el tamaño y la posición del formulario
             officeform.TopLevel = false;
             officeform.Size = centroMainForm.Size;
@@ -240,7 +241,7 @@ namespace SoftAssist
             // Establecer el tamaño y la posición del formulario
             keysform.TopLevel = false;
             keysform.Size = centroMainForm.Size;
-            keysform.Location = new Point(0,0);
+            keysform.Location = new Point(0, 0);
 
             // Agregar el formulario como un control secundario del panel
             centroMainForm.Controls.Add(keysform);
@@ -296,7 +297,7 @@ namespace SoftAssist
         {
 
             // Establecer el tamaño y la posición del formulario
-           toolsform.TopLevel = false;
+            toolsform.TopLevel = false;
             toolsform.Size = centroMainForm.Size;
             toolsform.Location = new Point(0, 0);
 
@@ -333,7 +334,7 @@ namespace SoftAssist
             logform.Show();
 
             focusButton(logButton);
-            
+
             x64form.Hide();
             x32form.Hide();
             keysform.Hide();
@@ -341,9 +342,10 @@ namespace SoftAssist
             officeform.Hide();
         }
 
-        private void showLog() {
+        private void showLog()
+        {
 
-            
+
             // Establecer el tamaño y la posición del formulario
             logform.TopLevel = false;
             logform.Size = centroMainForm.Size;

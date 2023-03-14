@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.IO.Compression;
-using System.Linq;
-using System.Security.Principal;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SoftAssist
 {
     internal class Installer
     {
 
-        public void InstallProgram(String software, String Silent,String processName)
+        public void InstallProgram(String software, String Silent, String processName)
         {
             //Crea instancia del proceso y ejecuta el comando cmd.exe para mandar la orden de ejecutar el programa
             Process process = new Process();

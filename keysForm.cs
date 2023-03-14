@@ -1,16 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using static System.Windows.Forms.DataFormats;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
+﻿using System.Diagnostics;
 
 namespace SoftAssist
 {
@@ -24,7 +12,7 @@ namespace SoftAssist
             vScrollBar1.Visible = false;
             windowsProgressBar.Visible = false;
             officeProgressBar.Visible = false;
-           
+
 
         }
 
@@ -47,22 +35,22 @@ namespace SoftAssist
 
         private void win10radioButton_CheckedChanged(object sender, EventArgs e)
         {
-            
-            installer.unzipAndInstall(win10radioButton, "KMSpico",windowsProgressBar);
+
+            installer.unzipAndInstall(win10radioButton, "KMSpico", windowsProgressBar);
 
         }
 
         private void win7radioButton_CheckedChanged(object sender, EventArgs e)
         {
-            installer.unzipAndInstall(win7radioButton, "RemoveWAT",windowsProgressBar);
+            installer.unzipAndInstall(win7radioButton, "RemoveWAT", windowsProgressBar);
         }
 
 
         private void windows7bradioButton_CheckedChanged(object sender, EventArgs e)
         {
-            
+
             installer.unzipAndInstall(windows7bradioButton, "windows7loader", windowsProgressBar);
-            
+
             Thread.Sleep(3000);
 
             installer.InstallProgram("Activadores\\windows7loader.exe", "", "windows7loader.exe");
@@ -112,7 +100,7 @@ namespace SoftAssist
                 }
             }
 
-            
+
 
         }
 

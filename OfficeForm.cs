@@ -1,17 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace SoftAssist
+﻿namespace SoftAssist
 {
     public partial class OfficeForm : Form
-    {   
+    {
         Installer installer = new Installer();
         public OfficeForm()
         {
@@ -21,7 +11,8 @@ namespace SoftAssist
         private void office2019radioButton_CheckedChanged(object sender, EventArgs e)
         {
 
-            if (office2019radioButton.Checked) {
+            if (office2019radioButton.Checked)
+            {
 
                 // Preguntar si esta seguro de realizar la accion
                 DialogResult dialogResult = MessageBox.Show("¿Estas seguro de installar Office 2019?", "Confirmación", MessageBoxButtons.YesNo);
