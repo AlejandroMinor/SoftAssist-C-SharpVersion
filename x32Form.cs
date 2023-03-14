@@ -1,16 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Drawing.Imaging;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace SoftAssist
+﻿namespace SoftAssist
 {
     public partial class x32Form : Form
     {
@@ -74,7 +62,8 @@ namespace SoftAssist
             this.teamviewerCheckBoxx32.Enabled = true;
         }
 
-        private void RunLoop() {
+        private void RunLoop()
+        {
 
             stopLoop = false;
 
@@ -265,12 +254,12 @@ namespace SoftAssist
             {
                 stopLoop = true;
                 MessageBox.Show("La instalación se detuvo");
-                Stopbuttonx32.Visible= false;
-                Installbuttonx32.Visible= true;
+                Stopbuttonx32.Visible = false;
+                Installbuttonx32.Visible = true;
                 enableAllCheckBox();
 
             }
-            
+
         }
     }
 }
