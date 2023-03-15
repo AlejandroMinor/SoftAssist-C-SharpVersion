@@ -45,12 +45,14 @@
             this.NetCuatroradioButton = new System.Windows.Forms.RadioButton();
             this.NetCuatroCincoradioButton = new System.Windows.Forms.RadioButton();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.diagnosticogroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.ConfiguracionesgroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.NetFrameworkgroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // crystalDiskradioButton
@@ -71,9 +73,9 @@
             this.diagnosticogroupBox.Controls.Add(this.saludBateriaradioButton);
             this.diagnosticogroupBox.Controls.Add(this.saludhddradioButton);
             this.diagnosticogroupBox.Controls.Add(this.crystalDiskradioButton);
-            this.diagnosticogroupBox.Location = new System.Drawing.Point(23, 74);
+            this.diagnosticogroupBox.Location = new System.Drawing.Point(34, 123);
             this.diagnosticogroupBox.Name = "diagnosticogroupBox";
-            this.diagnosticogroupBox.Size = new System.Drawing.Size(340, 111);
+            this.diagnosticogroupBox.Size = new System.Drawing.Size(314, 111);
             this.diagnosticogroupBox.TabIndex = 1;
             this.diagnosticogroupBox.TabStop = false;
             this.diagnosticogroupBox.Text = "Diagnóstico del Equipo";
@@ -118,9 +120,9 @@
             this.ConfiguracionesgroupBox.Controls.Add(this.AdminDiscosradioButton);
             this.ConfiguracionesgroupBox.Controls.Add(this.ControlPermisosradioButton);
             this.ConfiguracionesgroupBox.Controls.Add(this.AdminDispositivosradioButton);
-            this.ConfiguracionesgroupBox.Location = new System.Drawing.Point(23, 226);
+            this.ConfiguracionesgroupBox.Location = new System.Drawing.Point(34, 275);
             this.ConfiguracionesgroupBox.Name = "ConfiguracionesgroupBox";
-            this.ConfiguracionesgroupBox.Size = new System.Drawing.Size(340, 113);
+            this.ConfiguracionesgroupBox.Size = new System.Drawing.Size(314, 113);
             this.ConfiguracionesgroupBox.TabIndex = 3;
             this.ConfiguracionesgroupBox.TabStop = false;
             this.ConfiguracionesgroupBox.Text = "Diagnóstico del Equipo";
@@ -173,9 +175,9 @@
             this.NetFrameworkgroupBox.Controls.Add(this.NetTresCincoradioButton);
             this.NetFrameworkgroupBox.Controls.Add(this.NetCuatroradioButton);
             this.NetFrameworkgroupBox.Controls.Add(this.NetCuatroCincoradioButton);
-            this.NetFrameworkgroupBox.Location = new System.Drawing.Point(23, 378);
+            this.NetFrameworkgroupBox.Location = new System.Drawing.Point(34, 427);
             this.NetFrameworkgroupBox.Name = "NetFrameworkgroupBox";
-            this.NetFrameworkgroupBox.Size = new System.Drawing.Size(340, 113);
+            this.NetFrameworkgroupBox.Size = new System.Drawing.Size(314, 113);
             this.NetFrameworkgroupBox.TabIndex = 4;
             this.NetFrameworkgroupBox.TabStop = false;
             this.NetFrameworkgroupBox.Text = "NetFramework";
@@ -224,10 +226,20 @@
             // 
             // vScrollBar1
             // 
-            this.vScrollBar1.Location = new System.Drawing.Point(371, -1);
+            this.vScrollBar1.Location = new System.Drawing.Point(384, -10);
             this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(26, 561);
+            this.vScrollBar1.Size = new System.Drawing.Size(26, 677);
             this.vScrollBar1.TabIndex = 5;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox4.Location = new System.Drawing.Point(123, -4);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(146, 119);
+            this.pictureBox4.TabIndex = 6;
+            this.pictureBox4.TabStop = false;
             // 
             // ToolsForm
             // 
@@ -235,7 +247,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(125)))), ((int)(((byte)(189)))));
-            this.ClientSize = new System.Drawing.Size(397, 560);
+            this.ClientSize = new System.Drawing.Size(408, 681);
+            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.vScrollBar1);
             this.Controls.Add(this.NetFrameworkgroupBox);
             this.Controls.Add(this.ConfiguracionesgroupBox);
@@ -254,6 +267,7 @@
             this.NetFrameworkgroupBox.ResumeLayout(false);
             this.NetFrameworkgroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -276,5 +290,6 @@
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
+        private PictureBox pictureBox4;
     }
 }

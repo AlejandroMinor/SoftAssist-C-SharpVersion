@@ -30,18 +30,21 @@
     <None Remove="img\icons8-key-security-24B.png" />
     <None Remove="img\icons8-log-24A.png" />
     <None Remove="img\icons8-log-24B.png" />
+    <None Remove="img\icons8-microsoft-office-2019-48.png" />
     <None Remove="img\icons8-monitor-24.png" />
     <None Remove="img\icons8-monitor-24A.png" />
     <None Remove="img\icons8-monitor-24B.png" />
     <None Remove="img\icons8-office-365-24A.png" />
     <None Remove="img\icons8-office-365-24B.png" />
     <None Remove="img\icons8-ok-48.png" />
+    <None Remove="img\icons8-padlock-48.png" />
     <None Remove="img\icons8-save-24A.png" />
     <None Remove="img\icons8-save-24B.png" />
     <None Remove="img\icons8-system-information-24A.png" />
     <None Remove="img\icons8-system-information-24B.png" />
     <None Remove="img\icons8-tools-24A.png" />
     <None Remove="img\icons8-tools-24B.png" />
+    <None Remove="img\icons8-windows-10-48.png" />
     <None Remove="img\index-48.png" />
     <None Remove="img\index-48B.png" />
     <None Remove="img\java-48.png" />
@@ -136,6 +139,9 @@
     <EmbeddedResource Include="img\icons8-log-24B.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="img\icons8-microsoft-office-2019-48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="img\icons8-monitor-24A.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -154,6 +160,9 @@
     <EmbeddedResource Include="img\icons8-ok-48.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="img\icons8-padlock-48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="img\icons8-save-24A.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -164,6 +173,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="img\icons8-system-information-24B.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img\icons8-windows-10-48.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="img\teamviewer-48.png">

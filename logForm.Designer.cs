@@ -40,11 +40,11 @@
             this.richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBox.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.richTextBox.ForeColor = System.Drawing.Color.Orange;
-            this.richTextBox.Location = new System.Drawing.Point(13, 214);
+            this.richTextBox.Location = new System.Drawing.Point(13, 135);
             this.richTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox.Name = "richTextBox";
             this.richTextBox.ReadOnly = true;
-            this.richTextBox.Size = new System.Drawing.Size(395, 168);
+            this.richTextBox.Size = new System.Drawing.Size(395, 247);
             this.richTextBox.TabIndex = 0;
             this.richTextBox.Text = "";
             // 
@@ -54,7 +54,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(97, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(235, 195);
+            this.pictureBox1.Size = new System.Drawing.Size(205, 116);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
