@@ -8,6 +8,10 @@ namespace SoftAssist
 
         public void InstallProgram(String software, String Silent, String processName)
         {
+            //Software es el nombre del programa con su extensión .exe o msi
+            //Silent es el comando para ejecutar el programa en modo silencioso
+            //processName es el nombre del proceso que se ejecuta al instalar el programa osea, es el mismo nombre del programa con su extensión .exe o msi
+
             //Crea instancia del proceso y ejecuta el comando cmd.exe para mandar la orden de ejecutar el programa
             Process process = new Process();
             process.StartInfo.Verb = "runas";

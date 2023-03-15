@@ -67,6 +67,8 @@
         private void RunLoop()
         {
 
+            // Definir los datos de cada programa en un array de objetos y llamar a InstallProgram para cada programa seleccionado en el formulario
+
             stopLoop = false;
 
             Installer installer = new Installer();
