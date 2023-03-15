@@ -606,6 +606,56 @@
         /1o5jiqcwh6MAAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="ActivadorespictureBox.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EQAACxEBf2RfkQAAAZJJREFUaEPtmb1KA1EQhe8TCLb6BJZiLTa2lrYiCNZ2+gCCPoCN2NkICtkrihaC
+        lZWktBIsLf3BRhDNeDbsBGEnu3Mza4w6H3zckLOZvSdki80Gx3GcZjml8ZDRTDimRazrIdIu1gt4Xxwx
+        AsibvML6BEk0o07x6SFR3uQ+bMPn3qZS/JYCJzQZWjSH4StwCx4VSRA3YXHgAvxNRlqC23h9iLWN9aU3
+        /KuMlFlMKpBRhDfwVRxWJSNlFpMKSAO0MlJm0QtoZaTMYuI10BGHaGSkzKIX0MpImcWkApE+SgO0MlJm
+        0QtoZaTMYmKB99IArYyUWfQCWhkps5hUwPlpmvoJ5fcMGT02phq/iIGUWfQCWhkps+gFtDJSZtELaGWk
+        zKIX0MpImcX/VqD/f591MlJmMakA0+9hQ6S77kDpRIyUWRyoQBVnNIbB091ykTbgHk5yWaS/oEAdLZrC
+        SRfgGtyB5/AWm3krbU7j0AtUEWkCzmNTq1jrnznkjlSBKvJyGc3CZbgJD+A13n8ojnAc5+8QwieaSMqk
+        4OZNEgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="OfficepictureBox.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAANuSURBVGhD7ZlNSFRRGIZPaSKBhOhi5t47kwVthIKohS0y
+        KqEWkTOC69rktmgRgYtWheCmlhFtC4wgRGdMhRa5CYQQJAxTKZwZJGxhYpHS9N3htY6399CxM/4s5oGH
+        CTrf3OfM/UEdVaFCha0h63mnskHQnwmCrxnfX3zd3Phh9kLNrfl2lcCS3clALHYw6/tPJfynbKCoO3o4
+        Xvx4qaqYS6mZfEo9mO9QbcUutQ+jO8uLhoY6ib4nn/a3aLjum+P1xXxa/TGlFnNp1SevXQudKoa32z76
+        lKoa9P1r8qkXWHDU0UPxjRvQlDOzJhsZK7Srq9tyZjKed16iJqKR/5LFR5XNZOeuqFocqrwM+/4RCemL
+        htnKgqkp1Y1DloeBZLJeAnrkcvkejdqMNJY7hUO7IzdoOnwcsiBbZX4yk0h0k1BqeE/g8G5kE4nTErAW
+        DbJRomdl83cHg+Ao3k6xWJMYcUMCRlicSYnOy8x9eW2Rgj14m9+wUJMYcUOilqKRUSV4WYIfySP1XPho
+        xSiFhZrEiBssWFfCp4c8z/pHBBZqEiNusGjdoSC4iKVWsFCTGHGDRev2x+P7sdQKFmoSI26waF0ss4aF
+        msSIGyxaF8usYaEmMeIGi9bFMmtYqEmMuMGidbHMGhZqEiNusGhdLLOGhZrEiBssWhfLrGGhJjHiBovW
+        xTJrWKhJjLjBonWxzBoWahIjbrBoXSyzhoWaxIgbLFoXy6xhoSYx4gaL1sUya1ioSYy4waLXlZ9Ef2CZ
+        NSzUJEbcYOHrygbGscwaFmoSI26w8JLhL/ee14Zl1rBQkxhxQ37b+qSHh5eN+EQ8hiWbgoWaxIgbA0HQ
+        KrHTspEF2UCP/DvAf/0XLNQkRnYXLNQkRspPeO3LmZjTLy1bWahJHK78SPwsi7ORhTJzabWKw5UfeQJ9
+        YXE2slimbOAdDld+5AzckJv6ry8xbGSx1JS6icNtDaWnUxBMsUiTw00ej42YS6lnk52qBofaOsI/qcjl
+        1CsbWWXBUceaG2lwyZRaCb8XkNeO4h21F4fYHl4mkyck8G00OOrU2doN0RI8I68PC2nV+fmyqsPb7Qyv
+        lKqWe+O2nJEVFj9+8kB4Yy7LJzwi4dcL7aoJo7uL0jc4vv9YNpOT8KXRptj7iZa65/kO1Vo8o6qxrEKF
+        Cs4o9Qtu8GECIIevqwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="KeyspictureBox.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAJBSURBVGhD7ZhPSxtRFMUfQlf6DeyyupUaqN3lH9m2m3wO
+        oftCdlZpslD7DeomSD6HG7s2ZNNN3Sm0TaGxgtNz5RjG8erDm+SOkfnBYZL37jv3zPheJAkFBQXTo1Qq
+        vajVas1qtXqA6wmuf3Ad8rWMNaWG5U+LSqXyHiEHCJk8JKmRWi7Ln1artYBgn7JBI7qCtmQtbfIDQR4b
+        Pq0t2uSDbAWEkKc5DoUtMsJ1D3MbjUZjUVQul99ifB+6SNdCVxh7Rztf5DDKfk4Hwvsf0BpL7lCv119j
+        /jSzZpDLwUbzZibI6KHwN6B2HXXZv0ST034ghHwspkPscioK1n5Jr8X7r5zyA4376RDQG05FkTORWdvn
+        lB9oKv+gxiEQaolTUaQ2vRYacsqPTICEw/NDcQN5M1c3kGyHl//a4RD6fdkOySwlPaDeaCessP1kXIf/
+        HM61ZrOU9Ew6YZkx7MiT1xp4CL27jGHHY9vcJ/T+yRh2NGNPMYYdzdRTjGFHM/UUY9jRTD3FGHY0U08x
+        hh3N1FOMYUczjQkff8n3jyE5/hCSb5C8ljGtNibGsKOZxiSBjzZvS8a02pgYw45mGpM8+ewNyJhWGxNj
+        2NFMY5Jtk70BGdNqY2IMO5ppTHO/hW4OsTz1uTzE0xRj2NFMPcUYdjRTTzGGHc3UU4xhRzP1FGPY0Uw9
+        xRh28OX6l2bsoal8pYRJTzP3EHofMoadUTuswuhMazBLyc8qfzvhFWNMhvw+g5voemwn6SFPfmrhCwqe
+        NSH8BzI8+aCcapR7AAAAAElFTkSuQmCC
+</value>
+  </data>
   <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

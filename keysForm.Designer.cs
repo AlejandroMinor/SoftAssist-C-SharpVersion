@@ -49,11 +49,17 @@
             this.button1 = new System.Windows.Forms.Button();
             this.openPathbutton = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.ActivadorespictureBox = new System.Windows.Forms.PictureBox();
+            this.OfficepictureBox = new System.Windows.Forms.PictureBox();
+            this.KeyspictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ActivadorespictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OfficepictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.KeyspictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // vScrollBar1
@@ -78,7 +84,7 @@
             // win10radioButton
             // 
             this.win10radioButton.AutoSize = true;
-            this.win10radioButton.Location = new System.Drawing.Point(6, 22);
+            this.win10radioButton.Location = new System.Drawing.Point(67, 22);
             this.win10radioButton.Name = "win10radioButton";
             this.win10radioButton.Size = new System.Drawing.Size(158, 19);
             this.win10radioButton.TabIndex = 3;
@@ -89,6 +95,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.ActivadorespictureBox);
             this.groupBox1.Controls.Add(this.windowsProgressBar);
             this.groupBox1.Controls.Add(this.windows7bradioButton);
             this.groupBox1.Controls.Add(this.win7radioButton);
@@ -111,7 +118,7 @@
             // windows7bradioButton
             // 
             this.windows7bradioButton.AutoSize = true;
-            this.windows7bradioButton.Location = new System.Drawing.Point(6, 72);
+            this.windows7bradioButton.Location = new System.Drawing.Point(67, 72);
             this.windows7bradioButton.Name = "windows7bradioButton";
             this.windows7bradioButton.Size = new System.Drawing.Size(130, 19);
             this.windows7bradioButton.TabIndex = 5;
@@ -123,7 +130,7 @@
             // win7radioButton
             // 
             this.win7radioButton.AutoSize = true;
-            this.win7radioButton.Location = new System.Drawing.Point(6, 47);
+            this.win7radioButton.Location = new System.Drawing.Point(67, 47);
             this.win7radioButton.Name = "win7radioButton";
             this.win7radioButton.Size = new System.Drawing.Size(161, 19);
             this.win7radioButton.TabIndex = 4;
@@ -134,6 +141,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.OfficepictureBox);
             this.groupBox2.Controls.Add(this.officeProgressBar);
             this.groupBox2.Controls.Add(this.office2010radioButton);
             this.groupBox2.Controls.Add(this.office360radioButton);
@@ -155,7 +163,7 @@
             // office2010radioButton
             // 
             this.office2010radioButton.AutoSize = true;
-            this.office2010radioButton.Location = new System.Drawing.Point(6, 72);
+            this.office2010radioButton.Location = new System.Drawing.Point(67, 75);
             this.office2010radioButton.Name = "office2010radioButton";
             this.office2010radioButton.Size = new System.Drawing.Size(84, 19);
             this.office2010radioButton.TabIndex = 5;
@@ -167,7 +175,7 @@
             // office360radioButton
             // 
             this.office360radioButton.AutoSize = true;
-            this.office360radioButton.Location = new System.Drawing.Point(6, 47);
+            this.office360radioButton.Location = new System.Drawing.Point(67, 50);
             this.office360radioButton.Name = "office360radioButton";
             this.office360radioButton.Size = new System.Drawing.Size(130, 19);
             this.office360radioButton.TabIndex = 4;
@@ -179,7 +187,7 @@
             // office1316radioButton
             // 
             this.office1316radioButton.AutoSize = true;
-            this.office1316radioButton.Location = new System.Drawing.Point(6, 22);
+            this.office1316radioButton.Location = new System.Drawing.Point(67, 25);
             this.office1316radioButton.Name = "office1316radioButton";
             this.office1316radioButton.Size = new System.Drawing.Size(159, 19);
             this.office1316radioButton.TabIndex = 3;
@@ -190,6 +198,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.KeyspictureBox);
             this.groupBox3.Controls.Add(this.winrarX32radioButton);
             this.groupBox3.Controls.Add(this.corelhostradioButton);
             this.groupBox3.Controls.Add(this.nitro8radioButton);
@@ -204,7 +213,7 @@
             // winrarX32radioButton
             // 
             this.winrarX32radioButton.AutoSize = true;
-            this.winrarX32radioButton.Location = new System.Drawing.Point(6, 47);
+            this.winrarX32radioButton.Location = new System.Drawing.Point(67, 47);
             this.winrarX32radioButton.Name = "winrarX32radioButton";
             this.winrarX32radioButton.Size = new System.Drawing.Size(135, 19);
             this.winrarX32radioButton.TabIndex = 6;
@@ -216,7 +225,7 @@
             // corelhostradioButton
             // 
             this.corelhostradioButton.AutoSize = true;
-            this.corelhostradioButton.Location = new System.Drawing.Point(6, 97);
+            this.corelhostradioButton.Location = new System.Drawing.Point(67, 97);
             this.corelhostradioButton.Name = "corelhostradioButton";
             this.corelhostradioButton.Size = new System.Drawing.Size(116, 19);
             this.corelhostradioButton.TabIndex = 5;
@@ -228,7 +237,7 @@
             // nitro8radioButton
             // 
             this.nitro8radioButton.AutoSize = true;
-            this.nitro8radioButton.Location = new System.Drawing.Point(6, 72);
+            this.nitro8radioButton.Location = new System.Drawing.Point(67, 72);
             this.nitro8radioButton.Name = "nitro8radioButton";
             this.nitro8radioButton.Size = new System.Drawing.Size(92, 19);
             this.nitro8radioButton.TabIndex = 4;
@@ -240,7 +249,7 @@
             // winrarX64radioButton
             // 
             this.winrarX64radioButton.AutoSize = true;
-            this.winrarX64radioButton.Location = new System.Drawing.Point(6, 22);
+            this.winrarX64radioButton.Location = new System.Drawing.Point(67, 22);
             this.winrarX64radioButton.Name = "winrarX64radioButton";
             this.winrarX64radioButton.Size = new System.Drawing.Size(135, 19);
             this.winrarX64radioButton.TabIndex = 3;
@@ -279,6 +288,33 @@
             this.pictureBox2.TabIndex = 27;
             this.pictureBox2.TabStop = false;
             // 
+            // ActivadorespictureBox
+            // 
+            this.ActivadorespictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ActivadorespictureBox.BackgroundImage")));
+            this.ActivadorespictureBox.Location = new System.Drawing.Point(9, 30);
+            this.ActivadorespictureBox.Name = "ActivadorespictureBox";
+            this.ActivadorespictureBox.Size = new System.Drawing.Size(51, 50);
+            this.ActivadorespictureBox.TabIndex = 28;
+            this.ActivadorespictureBox.TabStop = false;
+            // 
+            // OfficepictureBox
+            // 
+            this.OfficepictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("OfficepictureBox.BackgroundImage")));
+            this.OfficepictureBox.Location = new System.Drawing.Point(8, 34);
+            this.OfficepictureBox.Name = "OfficepictureBox";
+            this.OfficepictureBox.Size = new System.Drawing.Size(51, 50);
+            this.OfficepictureBox.TabIndex = 29;
+            this.OfficepictureBox.TabStop = false;
+            // 
+            // KeyspictureBox
+            // 
+            this.KeyspictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("KeyspictureBox.BackgroundImage")));
+            this.KeyspictureBox.Location = new System.Drawing.Point(6, 41);
+            this.KeyspictureBox.Name = "KeyspictureBox";
+            this.KeyspictureBox.Size = new System.Drawing.Size(51, 50);
+            this.KeyspictureBox.TabIndex = 30;
+            this.KeyspictureBox.TabStop = false;
+            // 
             // keysForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -311,6 +347,9 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ActivadorespictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OfficepictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.KeyspictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -337,5 +376,8 @@
         private PictureBox pictureBox2;
         private ProgressBar windowsProgressBar;
         private ProgressBar officeProgressBar;
+        private PictureBox ActivadorespictureBox;
+        private PictureBox OfficepictureBox;
+        private PictureBox KeyspictureBox;
     }
 }
