@@ -1,16 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Drawing.Imaging;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace SoftAssist
+﻿namespace SoftAssist
 {
     public partial class x64Form : Form
     {
@@ -76,7 +64,10 @@ namespace SoftAssist
             this.teamviewerCheckBoxx64.Enabled = true;
         }
 
-        private void RunLoop() {
+        private void RunLoop()
+        {
+
+            // Definir los datos de cada programa en un array de objetos y llamar a InstallProgram para cada programa seleccionado en el formulario
 
             stopLoop = false;
 
@@ -106,7 +97,7 @@ namespace SoftAssist
 
                 if (programa.Checkbox.Checked)
                 {
-                        installer.InstallProgram($"{programa.arch}\\{programa.Filename}", programa.itsSilence, programa.Filename);
+                    installer.InstallProgram($"{programa.arch}\\{programa.Filename}", programa.itsSilence, programa.Filename);
                 }
             }
 
@@ -267,12 +258,12 @@ namespace SoftAssist
             {
                 stopLoop = true;
                 MessageBox.Show("La instalación se detuvo");
-                Stopbuttonx64.Visible= false;
-                Installbuttonx64.Visible= true;
+                Stopbuttonx64.Visible = false;
+                Installbuttonx64.Visible = true;
                 enableAllCheckBox();
 
             }
-            
+
         }
     }
 }

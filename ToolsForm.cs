@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Management;
+﻿using System.Management;
 
 namespace SoftAssist
 {
@@ -22,7 +13,26 @@ namespace SoftAssist
         private void crystalDiskradioButton_CheckedChanged(object sender, EventArgs e)
         {
 
-
+            if (crystalDiskradioButton.Checked == true)
+            {
+                // Pregunta si se desea ejecutar la accion
+                DialogResult dialogResult = MessageBox.Show($"¿Estas seguro de ejecutar esta acción?", "Confirmación", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    // Hilo para ejecutar el programa
+                    Thread thread;
+                    thread = new Thread(() =>
+                    {
+                        Installer installer = new Installer();
+                        installer.InstallProgram("Extras\\CrystalDiskInfo\\DiskInfo64.exe","", "DiskInfo64.exe");
+                    });
+                    thread.Start();
+                }
+                else
+                {
+                    crystalDiskradioButton.Checked = false;
+                }
+            }
 
         }
 
@@ -80,8 +90,8 @@ namespace SoftAssist
         private void diagnosticogroupBox_Enter(object sender, EventArgs e)
         {
 
-    
-            
+
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
