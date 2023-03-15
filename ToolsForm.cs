@@ -13,7 +13,26 @@ namespace SoftAssist
         private void crystalDiskradioButton_CheckedChanged(object sender, EventArgs e)
         {
 
-
+            if (crystalDiskradioButton.Checked == true)
+            {
+                // Pregunta si se desea ejecutar la accion
+                DialogResult dialogResult = MessageBox.Show($"¿Estas seguro de ejecutar esta acción?", "Confirmación", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    // Hilo para ejecutar el programa
+                    Thread thread;
+                    thread = new Thread(() =>
+                    {
+                        Installer installer = new Installer();
+                        installer.InstallProgram("Extras\\CrystalDiskInfo\\DiskInfo64.exe","", "DiskInfo64.exe");
+                    });
+                    thread.Start();
+                }
+                else
+                {
+                    crystalDiskradioButton.Checked = false;
+                }
+            }
 
         }
 
