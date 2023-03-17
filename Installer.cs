@@ -86,6 +86,11 @@ namespace SoftAssist
         {
             using (ZipArchive archivoZip = ZipFile.OpenRead(rutaArchivoZip))
             {
+                 //Funcion para descomprimir, mandanddo datos para la barra de progreso
+                 // rutaString es la ruta del archivo zip 
+                 // rutaDestino es donde se va a descomprimir el archivo zip
+                 // progress es la barra de progreso
+
                 int totalEntradas = archivoZip.Entries.Count;
                 int entradasDescomprimidas = 0;
 
@@ -120,6 +125,13 @@ namespace SoftAssist
 
         public void unzipAndInstall(System.Windows.Forms.RadioButton radioButton, String programName, ProgressBar barraProgreso)
         {
+
+            // Funcion para descomprimir y despues ejecutar el programa
+            // radioButton es el radioButton que se selecciona para ejecutar el programa
+            // programName es el nombre del programa
+            // barraProgreso es la barra de progreso que se muestra mientras se descomprime el archivo zip
+
+
 
             if (radioButton.Checked)
             {

@@ -24,7 +24,7 @@ namespace SoftAssist
                     thread = new Thread(() =>
                     {
                         Installer installer = new Installer();
-                        installer.InstallProgram("Extras\\CrystalDiskInfo\\DiskInfo64.exe","", "DiskInfo64.exe");
+                        installer.InstallProgram("Extras\\CrystalDiskInfo\\DiskInfo64.exe", "", "DiskInfo64.exe");
                     });
                     thread.Start();
                 }
