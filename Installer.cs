@@ -173,6 +173,26 @@ namespace SoftAssist
 
         }
 
+        public void excuteCommand(string command) 
+        {
+            // Ejecuta un comando en la consola de windows
+            // command es el comando que se va a ejecutar en la consola de windows
+            {
+            // Crea una instancia del proceso y ejecuta el comando cmd.exe para mandar la orden de ejecutar el programa
+            Process process = new Process();
+            process.StartInfo.Verb = "runas";
+            process.StartInfo.FileName = "cmd.exe";
+            process.StartInfo.Arguments = $"/c  start /wait {command}";
+            process.StartInfo.UseShellExecute = false;
+            process.StartInfo.RedirectStandardOutput = true;
+            process.StartInfo.CreateNoWindow = true;
+            process.Start();
+            
+            }
+        
+        
+        }
+
 
     }
 }
