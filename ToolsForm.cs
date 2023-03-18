@@ -24,7 +24,7 @@ namespace SoftAssist
                     thread = new Thread(() =>
                     {
                         Installer installer = new Installer();
-                        installer.InstallProgram("Extras\\CrystalDiskInfo\\DiskInfo64.exe","", "DiskInfo64.exe");
+                        installer.InstallProgram("Extras\\CrystalDiskInfo\\DiskInfo64.exe", "", "DiskInfo64.exe");
                     });
                     thread.Start();
                 }
@@ -100,6 +100,74 @@ namespace SoftAssist
             crystalDiskradioButton.Checked = false;
             saludhddradioButton.Checked = false;
             saludBateriaradioButton.Checked = false;
+        }
+
+        private void AdminDispositivosradioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (AdminDispositivosradioButton.Checked)
+            {
+                
+                // Pregunta si se desea ejecutar la accion
+                DialogResult dialogResult = MessageBox.Show($"¿Estas seguro de ejecutar esta acción?", "Confirmación", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes) 
+                {
+                    Installer installer = new Installer();
+                    installer.excuteCommand("devmgmt.msc");
+
+                }
+                else
+                {
+                    AdminDispositivosradioButton.Checked = false;
+                }
+                
+            }
+
+        }
+
+        private void ControlPermisosradioButton_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (ControlPermisosradioButton.Checked)
+            {
+
+                // Pregunta si se desea ejecutar la accion
+                DialogResult dialogResult = MessageBox.Show($"¿Estas seguro de ejecutar esta acción?", "Confirmación", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    Installer installer = new Installer();
+                    installer.excuteCommand("%windir%\\System32\\UserAccountControlSettings.exe");
+
+                }
+                else
+                {
+                    ControlPermisosradioButton.Checked = false;
+                }
+
+            }
+
+        }
+
+        private void AdminDiscosradioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (AdminDiscosradioButton.Checked)
+            {
+
+                // Pregunta si se desea ejecutar la accion
+                DialogResult dialogResult = MessageBox.Show($"¿Estas seguro de ejecutar esta acción?", "Confirmación", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    Installer installer = new Installer();
+                    installer.excuteCommand("diskmgmt.msc");
+
+                }
+                else
+                {
+                    AdminDiscosradioButton.Checked = false;
+                }
+
+            }
+
+            
         }
     }
 }
