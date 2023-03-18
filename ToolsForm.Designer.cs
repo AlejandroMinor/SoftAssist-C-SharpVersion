@@ -146,6 +146,7 @@
             this.AdminDiscosradioButton.TabStop = true;
             this.AdminDiscosradioButton.Text = "Administrador de Discos";
             this.AdminDiscosradioButton.UseVisualStyleBackColor = false;
+            this.AdminDiscosradioButton.CheckedChanged += new System.EventHandler(this.AdminDiscosradioButton_CheckedChanged);
             // 
             // ControlPermisosradioButton
             // 
@@ -157,6 +158,7 @@
             this.ControlPermisosradioButton.TabStop = true;
             this.ControlPermisosradioButton.Text = "Control de Permisos";
             this.ControlPermisosradioButton.UseVisualStyleBackColor = false;
+            this.ControlPermisosradioButton.CheckedChanged += new System.EventHandler(this.ControlPermisosradioButton_CheckedChanged);
             // 
             // AdminDispositivosradioButton
             // 
@@ -168,6 +170,7 @@
             this.AdminDispositivosradioButton.TabStop = true;
             this.AdminDispositivosradioButton.Text = "Administrador de Dispositivos";
             this.AdminDispositivosradioButton.UseVisualStyleBackColor = true;
+            this.AdminDispositivosradioButton.CheckedChanged += new System.EventHandler(this.AdminDispositivosradioButton_CheckedChanged);
             // 
             // NetFrameworkgroupBox
             // 
