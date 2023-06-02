@@ -161,7 +161,11 @@ namespace SoftAssist
                     thread.Start();
 
                     // Mientras el hilo no termine, se ejecuta el metodo IsProcessRunning
-                    installer.InstallProgram($"Activadores\\{programName}.exe", "", $"{programName}.exe");
+                    // Iniciar un nuevo hilo para ejecutar la instalacion
+                    thread = new Thread(() =>
+                    installer.InstallProgram($"Activadores\\{programName}.exe", "", $"{programName}.exe"));
+                    // Inicia el hilo para ejecutar la instalacion
+                    thread.Start();
                 }
                 else
                 {

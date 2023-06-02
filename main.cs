@@ -10,6 +10,7 @@ namespace SoftAssist
         LogForm logform = new LogForm();
         OfficeForm officeform = new OfficeForm();
         ToolsForm toolsform = new ToolsForm();
+        InfoForm infoform = new InfoForm();
 
         public main()
         {
@@ -84,6 +85,7 @@ namespace SoftAssist
             logform.Hide();
             officeform.Hide();
             toolsform.Hide();
+            infoform.Hide();
 
         }
 
@@ -259,6 +261,7 @@ namespace SoftAssist
             officeform.Hide();
             logform.Hide();
             toolsform.Hide();
+            infoform.Hide();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -291,6 +294,7 @@ namespace SoftAssist
             logform.Hide();
             officeform.Hide();
             toolsform.Hide();
+            infoform.Hide();
         }
 
         private void toolsButton_Click(object sender, EventArgs e)
@@ -316,6 +320,7 @@ namespace SoftAssist
             keysform.Hide();
             logform.Hide();
             officeform.Hide();
+            infoform.Hide();
         }
 
         private void backupButton_Click(object sender, EventArgs e)
@@ -323,10 +328,6 @@ namespace SoftAssist
             focusButton(backupButton);
         }
 
-        private void systemInfoButton_Click(object sender, EventArgs e)
-        {
-            focusButton(systemInfoButton);
-        }
 
         private void logButton_Click(object sender, EventArgs e)
         {
@@ -340,6 +341,7 @@ namespace SoftAssist
             keysform.Hide();
             toolsform.Hide();
             officeform.Hide();
+            infoform.Hide();
         }
 
         private void showLog()
@@ -373,6 +375,31 @@ namespace SoftAssist
         {
             // Se crea una instancia del formulario para que este pueda mostrar el log desde el principio de la ejecución
             showLog();
+        }
+
+        private void systemInfoButton_Click(object sender, EventArgs e)
+        {
+            // Establecer el tamaño y la posición del formulario
+            infoform.TopLevel = false;
+            infoform.Size = centroMainForm.Size;
+            infoform.Location = new Point(0, 0);
+
+            // Agregar el formulario como un control secundario del panel
+            centroMainForm.Controls.Add(infoform);
+
+            // Quitar marco al formulario
+            infoform.FormBorderStyle = FormBorderStyle.None;
+
+            // Mostrar el formulario
+            infoform.Show();
+
+            focusButton(systemInfoButton);
+            x64form.Hide();
+            x32form.Hide();
+            keysform.Hide();
+            logform.Hide();
+            officeform.Hide();
+            toolsform.Hide();
         }
     }
 }
