@@ -6,6 +6,7 @@ namespace SoftAssist
     {
         // Creacion de objeto para ejecutar metodos de la clase Installer
         Installer installer = new Installer();
+        private Thread thread;
         public keysForm()
         {
             InitializeComponent();
@@ -36,13 +37,20 @@ namespace SoftAssist
         private void win10radioButton_CheckedChanged(object sender, EventArgs e)
         {
 
-            installer.unzipAndInstall(win10radioButton, "KMSpico", windowsProgressBar);
+            // iniciar un nuevo hilo para ejecutar la instalacion
+            thread = new Thread(() =>
+            installer.unzipAndInstall(win10radioButton, "KMSpico", windowsProgressBar));
+            thread.Start();
 
         }
 
         private void win7radioButton_CheckedChanged(object sender, EventArgs e)
         {
-            installer.unzipAndInstall(win7radioButton, "RemoveWAT", windowsProgressBar);
+            // Iniciar un nuevo hilo para ejecutar la instalacion
+            thread = new Thread(() =>
+            installer.unzipAndInstall(win7radioButton, "RemoveWAT", windowsProgressBar));
+            thread.Start();
+
         }
 
 
@@ -52,26 +60,36 @@ namespace SoftAssist
             installer.unzipAndInstall(windows7bradioButton, "windows7loader", windowsProgressBar);
 
             Thread.Sleep(3000);
-
-            installer.InstallProgram("Activadores\\windows7loader.exe", "", "windows7loader.exe");
+            // Iniciar un nuevo hilo para ejecutar la instalacion
+            thread = new Thread(() =>
+            installer.InstallProgram("Activadores\\windows7loader.exe", "", "windows7loader.exe"));
+            thread.Start();
         }
 
         private void office1316radioButton_CheckedChanged(object sender, EventArgs e)
         {
-            installer.unzipAndInstall(office1316radioButton, "KMSpico", officeProgressBar);
+            // Iniciar un nuevo hilo para ejecutar la instalacion
+            thread = new Thread(() => 
+            installer.unzipAndInstall(office1316radioButton, "KMSpico", officeProgressBar));
+            thread.Start();
         }
 
         private void office360radioButton_CheckedChanged(object sender, EventArgs e)
         {
             installer.unzipAndInstall(office360radioButton, "OInstall", officeProgressBar);
             Thread.Sleep(3000);
-
-            installer.InstallProgram("Activadores\\OInstall.exe", "", "OInstall.exe");
+            // Iniciar un nuevo hilo para ejecutar la instalacion
+            thread = new Thread(() =>
+            installer.InstallProgram("Activadores\\OInstall.exe", "", "OInstall.exe"));
+            thread.Start();
         }
 
         private void office2010radioButton_CheckedChanged(object sender, EventArgs e)
         {
-            installer.unzipAndInstall(office2010radioButton, "Office10", officeProgressBar);
+            // Iniciar un nuevo hilo para ejecutar la instalacion
+            thread = new Thread(() =>
+            installer.unzipAndInstall(office2010radioButton, "Office10", officeProgressBar));
+            thread.Start();
         }
 
         private void winrarX64radioButton_CheckedChanged(object sender, EventArgs e)
@@ -83,15 +101,16 @@ namespace SoftAssist
                 DialogResult dialogResult = MessageBox.Show($"¿Estas seguro de ejecutar Winrar Crack x64?", "Confirmación", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    Thread thread;
                     windowsProgressBar.Visible = true;
                     Installer installer = new Installer();
                     IProgress<int> progreso = new Progress<int>(valor =>
                     {
                         windowsProgressBar.Value = valor;
                     });
-
-                    installer.InstallProgram("Activadores\\WinrarCrackX64.exe", "", "WinrarCrackX64.exe");
+                    // Iniciar un nuevo hilo para ejecutar la instalacion
+                    thread = new Thread(() =>
+                    installer.InstallProgram("Activadores\\WinrarCrackX64.exe", "", "WinrarCrackX64.exe"));
+                    thread.Start();
                 }
                 else
                 {
@@ -113,15 +132,17 @@ namespace SoftAssist
                 DialogResult dialogResult = MessageBox.Show($"¿Estas seguro de ejecutar Winrar Crack x32?", "Confirmación", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    Thread thread;
+
                     windowsProgressBar.Visible = true;
                     Installer installer = new Installer();
                     IProgress<int> progreso = new Progress<int>(valor =>
                     {
                         windowsProgressBar.Value = valor;
                     });
-
-                    installer.InstallProgram("Activadores\\WinrarCrackX32.exe", "", "WinrarCrackX32.exe");
+                    // Iniciar un nuevo hilo para ejecutar la instalacion
+                    thread = new Thread(() =>
+                    installer.InstallProgram("Activadores\\WinrarCrackX32.exe", "", "WinrarCrackX32.exe"));
+                    thread.Start();
                 }
                 else
                 {
@@ -140,15 +161,16 @@ namespace SoftAssist
                 DialogResult dialogResult = MessageBox.Show($"¿Estas seguro de ejecutar esta acción?", "Confirmación", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    Thread thread;
                     windowsProgressBar.Visible = true;
                     Installer installer = new Installer();
                     IProgress<int> progreso = new Progress<int>(valor =>
                     {
                         windowsProgressBar.Value = valor;
                     });
-
-                    installer.InstallProgram("Activadores\\Nitro.txt", "", "Nitro.txt");
+                    // Iniciar un nuevo hilo para ejecutar la instalacion
+                    thread = new Thread(() =>
+                    installer.InstallProgram("Activadores\\Nitro.txt", "", "Nitro.txt"));
+                    thread.Start();
                 }
                 else
                 {
@@ -167,7 +189,7 @@ namespace SoftAssist
                 DialogResult dialogResult = MessageBox.Show($"¿Estas seguro de ejecutar esta acción?", "Confirmación", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    Thread thread;
+                    
                     windowsProgressBar.Visible = true;
                     Installer installer = new Installer();
                     IProgress<int> progreso = new Progress<int>(valor =>
@@ -176,8 +198,10 @@ namespace SoftAssist
                     });
                     string rutaCarpeta = @"C:\Windows\System32\drivers\etc";
                     Process.Start("explorer.exe", rutaCarpeta);
-
-                    installer.InstallProgram("Activadores\\corel_hosts.txt", "", "corel_hosts.txt");
+                    // Iniciar un nuevo hilo para ejecutar la instalacion
+                    thread = new Thread(() =>
+                    installer.InstallProgram("Activadores\\corel_hosts.txt", "", "corel_hosts.txt"));
+                    thread.Start();
 
                 }
                 else
